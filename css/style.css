@@ -1,8 +1,6 @@
 header {
+  text-transform: uppercase;
   color: #e3b873;
   background-color: #131313
-}
+ }
 
-.navbar-brand {
-  text-transform: uppercase
-}
