@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/obiwah/repair-design#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cssmin": "^0.2.0"
   },
   "dependencies": {
     "browser-sync": "^2.26.7"
