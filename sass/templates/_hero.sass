@@ -1,11 +1,25 @@
 .hero
   position: relative
 
+  display: flex
+  flex-direction: column
+  justify-content: center
   padding-top: 100px
 
   height: 100vh
 
+  color: $light
   background: $dark url("../img/hero_bg.jpg") no-repeat center / cover
+
+  &__content
+    max-width: 670px
+
+  &__text
+    max-width: 500px
+    font-size: 22px
+
+  &__btn
+    margin-right: 20px
 
   &__instagram
     position: absolute
@@ -14,6 +28,23 @@
 
     max-width: 80px
     height: 100%
+
+  &__scroll-down
+    position: absolute
+    left: 0
+    bottom: 0
+
+    display: flex
+    justify-content: center
+    align-items: center
+    min-width: 247px
+    min-height: 97px
+
+    text-decoration: none
+    text-transform: uppercase
+
+    color: $light
+    background-color: $dark
 
 .instagram
   display: flex
@@ -30,6 +61,14 @@
     text-decoration: none
     text-transform: uppercase
 
+    color: $primary
+
+.title
+  font-family: 'Yeseva One', cursive
+  font-size: 40px
+  text-transform: uppercase
+
+  &--primary
     color: $primary
 
 
