@@ -5,11 +5,20 @@
 
   text-transform: uppercase
 
+  &:hover
+    cursor: pointer
+
   &--primary
     color: $light
     background-color: $primary
+    box-shadow: 0 5px 15px rgba($primary, 0.2)
+    transition: box-shadow 0.3s
+
+    &:hover
+      box-shadow: none
 
   &--outline
     border: 1px solid $light
     color: $light
     background-color: transparent
+
