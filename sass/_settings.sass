@@ -4,3 +4,21 @@
 body
   font-family: "Futura Book", sans-serif
   font-size: 14px
+
+.section
+  &-title
+    text-align: center
+    text-transform: uppercase
+    font-family: "Yeseva One", cursive
+
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+
+      &::before, &::after
+        content: ""
+        width: 32px
+        height: 2px
+        margin: 0 10px
+        background-color: $primary
