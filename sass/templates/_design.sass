@@ -1,0 +1,69 @@
+.design
+  background-color: $dark3
+
+  &__section-title
+    margin-bottom: 2.78rem
+
+    color: $light
+  &__card
+    margin-bottom: 5.7rem
+
+.card
+  &__image
+    display: block
+    width: 100%
+
+  &__text
+    position: relative
+    margin-top: -9.5rem
+
+    max-width: 23.6rem
+    padding: 1.79rem 2.14rem
+
+    background-color: $light
+    box-shadow: 0.71rem 0.71rem 1.43rem rgba(0, 0, 0, 0.03)
+
+  &__title
+    font-family: "Yeseva One", cursive
+    font-size: 1.29rem
+    line-height: 1.79rem
+    margin-top: 0
+    margin-bottom: 0.7em
+
+    color: $dark2
+
+  &__list
+    padding: 0 0 0 1rem
+    margin: 0 0 2.5rem 0
+
+    font-size: 1.07em
+    line-height: 1.79rem
+
+    color: $secondary
+
+  &__pricetag
+    position: absolute
+    left: 0
+    bottom: -1.79rem
+
+    padding: 1.214rem 2.6rem
+
+    font-family: "Yeseva One", cursive
+    font-size: 1.19rem
+    text-transform: uppercase
+
+    color: $light
+    background-color: $primary
+
+.row
+  display: flex
+  flex-direction: column
+
+@media screen and (min-width: 570px)
+  .row
+    flex-direction: row
+    justify-content: space-between
+
+  .card
+    flex-basis: 32%
+
