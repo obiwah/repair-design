@@ -24,3 +24,48 @@
     color: $light
     background-color: transparent
 
+.label
+  font-size: 1.07rem
+
+  &--light
+    color: rgba($light, 0.5)
+
+.input
+  padding: 0.5rem 0
+
+  font-size: 1.285rem
+
+  color: $light
+  border: none
+  border-bottom: 1px solid rgba($light, 0.15)
+  background-color: transparent
+
+  &::placeholder
+    color: $light
+
+.policy
+  &__checkbox
+    opacity: 0
+    visibility: hidden
+
+    &:checked +
+      .policy__label
+        &::before
+          background: $primary url("../img/check.svg") no-repeat center / 0.8rem
+
+  &__label
+    display: flex
+    align-items: center
+
+    &::before
+      content: ""
+      width: 18px
+      height: 18px
+      margin-right: 0.64rem
+
+      border: 1px solid $primary
+      border-radius: 1px
+      cursor: pointer
+
+
+
