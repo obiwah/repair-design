@@ -1,8 +1,9 @@
-document.addEventListener(`DOMContentLoaded`, () => {
-	const modal =  document.querySelector('.modal'),
+$(function () {
+	const modal = $(`.modal`),
 		modalBtn = document.querySelectorAll(`[data-toggle=modal]`),
 		closeBtn = document.querySelector('.modal__close'),
 		modalClose = () => modal.classList.remove(`modal--visible`);
+	console.log(modal);
 
 	modalBtn.forEach(element => {
 		element.addEventListener(`click`, () => {
@@ -19,4 +20,4 @@ document.addEventListener(`DOMContentLoaded`, () => {
 	});
 
 	closeBtn.addEventListener(`click`, modalClose);
-});
+})
