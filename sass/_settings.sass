@@ -83,6 +83,10 @@ img
 
     color: $secondary
 
+  &__item
+    &--mobile-showable
+      display: none
+
   &__pricetag
     position: absolute
     left: 0
@@ -108,6 +112,13 @@ img
       margin-top: -13rem
       margin-left: 0
 
+    &__item
+      &--mobile-hidable
+        display: none
+
+      &--mobile-showable
+        display: inline
+
   .section
     &-title
       &__description
@@ -118,6 +129,9 @@ img
         line-height: 1.93rem
 
         color: $light
+
+
+
 
 
 
