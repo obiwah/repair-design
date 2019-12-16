@@ -27,6 +27,7 @@ $(function () {
 	const modal =  $(`.modal`),
 		modalBtn = $(`[data-toggle=modal]`),
 		closeBtn = $(`.modal__close`),
+		scrollUpBtn = $(`.scroll-up`),
 		modalClose = () => modal.removeClass(`modal--visible`);
 
 	modalBtn.click(function() {
@@ -42,4 +43,12 @@ $(function () {
 	});
 
 	closeBtn.click(modalClose);
+
+	$(document).scroll((scrollEvent) => {
+		if (scrollEvent.originalEvent.target.defaultView.scrollY > 450 ) {
+			scrollUpBtn.removeClass(`scroll--invisible`)
+		} else {
+			scrollUpBtn.addClass(`scroll--invisible`);
+		}
+	})
 });

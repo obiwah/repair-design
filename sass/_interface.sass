@@ -67,5 +67,47 @@
       border-radius: 1px
       cursor: pointer
 
+.scroll
+  text-decoration: none
+  text-transform: uppercase
+
+  color: $light
+  background-color: $dark
+
+  transition: 300ms
+
+  &::after
+    content: ""
+    width: 29px
+    height: 29px
+    margin-left: 12px
+
+    border: 2px solid $primary
+    border-radius: 50%
+
+  &--invisible
+    opacity: 0
+    visibility: hidden
+
+    transition: 300ms
+
+  &-up
+    position: fixed
+    right: 0
+    bottom: 0
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    padding: 1rem
+
+    &::after
+      content: ""
+
+      background: url("../img/interface/arrow_up.svg") no-repeat center
+
+
+
 
 
