@@ -17,8 +17,15 @@ img
 .section
   padding: 60px 0
 
+  &--dark
+    color: $light
+    background-color: $dark
+
   &-title
     text-align: center
+
+    &--left
+      text-align: left
 
     &__heading
       margin-bottom: 0.93rem
@@ -27,6 +34,27 @@ img
       font-size: 1.43rem
       line-height: 2rem
       text-transform: uppercase
+
+      &--primary
+        color: $primary
+
+    &__word
+      display: flex
+      align-items: center
+
+      &::after
+        content: ''
+        width: 91px
+        height: 2px
+        margin-left: 2rem
+
+        background-color: $primary
+
+    &__text
+      max-width: 31.57rem
+
+      font-size: 1.28rem
+      line-height: 2.07rem
 
     &__image
       display: flex
@@ -48,6 +76,8 @@ img
       line-height: 1.93rem
 
       color: $dark2
+
+
 
 .card
   &__text
