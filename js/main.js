@@ -24,17 +24,20 @@
 // });
 
 $(function () {
-	const modal =  $(`.modal`),
-		modalBtn = $(`[data-toggle=modal]`),
-		closeBtn = $(`.modal__close`),
-		scrollUpBtn = $(`.scroll-up`),
-		modalClose = () => modal.removeClass(`modal--visible`);
+	let $modal =  $(`.modal`),
+		$modalBtn = $(`[data-toggle=modal]`),
+		$closeBtn = $(`.modal__close`),
+		$scrollUpBtn = $(`.scroll-up`);
 
-	modalBtn.click(function() {
-		modal.addClass(`modal--visible`);
+	function modalClose () {
+		$modal.removeClass(`modal--visible`);
+	}
 
-		modal.click((clickEvent) => {
-			if (clickEvent.target.classList[0] === `modal`) modalClose();
+	$modalBtn.click(function() {
+		$modal.addClass(`modal--visible`);
+
+		$modal.click((clickEvent) => {
+			if (clickEvent.target.classList.contains(`modal`)) modalClose();
 		});
 
 		$(document).keydown((keyEvent) => {
@@ -42,13 +45,13 @@ $(function () {
 		});
 	});
 
-	closeBtn.click(modalClose);
+	$closeBtn.click(modalClose);
 
 	$(document).scroll((scrollEvent) => {
 		if (scrollEvent.originalEvent.target.defaultView.scrollY > 450 ) {
-			scrollUpBtn.removeClass(`scroll--invisible`)
+			$scrollUpBtn.removeClass(`scroll--invisible`)
 		} else {
-			scrollUpBtn.addClass(`scroll--invisible`);
+			$scrollUpBtn.addClass(`scroll--invisible`);
 		}
 	});
 
@@ -65,4 +68,6 @@ $(function () {
 			type: 'bullets',
 		}
 	})
+
+	// let next = $
 });
