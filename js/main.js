@@ -93,4 +93,12 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 
 	$bullets.css(`left`, $prev.width() + 30);
 	$next.css(`left`, $prev.width() + $bullets.width() + 60);
+
+	new WOW().init();
+
+	$modalBtn.hover(() => {
+		$modalBtn.addClass(`animated pulse`);
+	}, () => {
+		$modalBtn.removeClass(`animated pulse`);
+	});
 });
