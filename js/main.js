@@ -23,15 +23,11 @@
 // 	closeBtn.addEventListener(`click`, modalClose);
 // });
 
-$(function () {
+$(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	let $modal =  $(`.modal`),
-		$modalBtn = $(`[data-toggle=modal]`),
-		$closeBtn = $(`.modal__close`),
-		$scrollUpBtn = $(`.scroll-up`);
-
-	function modalClose () {
-		$modal.removeClass(`modal--visible`);
-	}
+			$modalBtn = $(`[data-toggle=modal]`),
+			$closeBtn = $(`.modal__close`),
+			$scrollUpBtn = $(`.scroll-up`);
 
 	$modalBtn.click(function() {
 		$modal.addClass(`modal--visible`);
@@ -47,6 +43,10 @@ $(function () {
 
 	$closeBtn.click(modalClose);
 
+	function modalClose () {
+		$modal.removeClass(`modal--visible`);
+	}
+
 	$(document).scroll((scrollEvent) => {
 		if (scrollEvent.originalEvent.target.defaultView.scrollY > 450 ) {
 			$scrollUpBtn.removeClass(`scroll--invisible`)
@@ -55,7 +55,7 @@ $(function () {
 		}
 	});
 
-	//initialize swiper when document ready
+	//initialize swiper
 	let mySwiper = new Swiper ('.swiper-container', {
 		// Optional parameters
 		loop: true,
@@ -66,8 +66,13 @@ $(function () {
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
-		}
-	})
+		},
+	});
 
-	// let next = $
+	let $next = $('.swiper-button-next'),
+			$prev = $('.swiper-button-prev'),
+			$bullets = $('.swiper-pagination');
+
+	$bullets.css(`left`, $prev.width()+ 30);
+	$next.css(`left`, $prev.width() + $bullets.width() + 60);
 });

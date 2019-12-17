@@ -1,3 +1,7 @@
+.swiper-container-horizontal>.swiper-pagination-bullets
+  bottom: 0
+  width: auto
+
 .swiper
   &-slide
     display: flex
@@ -6,6 +10,7 @@
     &__text
       flex-basis: 50%
       margin-bottom: 2.42rem
+      padding-bottom: 2rem
 
     &__heading
       margin-bottom: 0.64rem
@@ -39,8 +44,9 @@
       &::after
         display: none
 
-
     &-prev
+      left: 0
+
       background: url("../img/interface/arrow_prev.svg") no-repeat center
 
     &-next
