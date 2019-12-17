@@ -55,24 +55,42 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		}
 	});
 
+	// let stepsSwiper =  new Swiper (`.steps__swiper-container`, {
+	// 	wrapperClass: `steps__swiper-wrapper`,
+	// 	slideClass: `steps__swiper-slide`,
+	// 	loop: true,
+	// 	navigation: {
+	// 		nextEl: `.steps__swiper-button-next`,
+	// 		prevEl: `.steps__swiper-button-prev`,
+	// 	},
+	// 	pagination: {
+	// 		el: `.steps__swiper-pagination`,
+	// 		type: `bullets`,
+	// 	},
+	// 	grabCursor: true,
+	// });
+
 	//initialize swiper
-	let mySwiper = new Swiper ('.swiper-container', {
+	let projectsSwiper = new Swiper ('.projects .swiper-container', {
 		// Optional parameters
 		loop: true,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.projects .swiper-button-next',
+			prevEl: '.projects .swiper-button-prev',
 		},
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.projects .swiper-pagination',
 			type: 'bullets',
 		},
+		// control: {
+		// 	control: stepsSwiper.swiper,
+		// }
 	});
 
-	let $next = $('.swiper-button-next'),
-			$prev = $('.swiper-button-prev'),
-			$bullets = $('.swiper-pagination');
+	let $next = $('.projects .swiper-button-next'),
+			$prev = $('.projects .swiper-button-prev'),
+			$bullets = $('.projects .swiper-pagination');
 
-	$bullets.css(`left`, $prev.width()+ 30);
+	$bullets.css(`left`, $prev.width() + 30);
 	$next.css(`left`, $prev.width() + $bullets.width() + 60);
 });

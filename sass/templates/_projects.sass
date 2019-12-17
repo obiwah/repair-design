@@ -1,54 +1,62 @@
-.swiper-container-horizontal>.swiper-pagination-bullets
-  bottom: 0
-  width: auto
+.projects
+  &__heading
+    letter-spacing: -0.07em
 
-.swiper
-  &-slide
-    display: flex
-    flex-wrap: wrap
+  &__word
+    &::after
+      margin-left: 2rem
 
-    &__text
-      flex-basis: 50%
-      margin-bottom: 2.42rem
-      padding-bottom: 2rem
+  & .swiper-container-horizontal>.swiper-pagination-bullets
+    bottom: 0
+    width: auto
 
-    &__heading
-      margin-bottom: 0.64rem
+  & .swiper
+    &-slide
+      display: flex
+      flex-wrap: wrap
 
-      font-family: "Yeseva One", cursive
-      font-size: 1.286rem
-      line-height: 1.78rem
-      text-transform: uppercase
+      &__text
+        flex-basis: 50%
+        margin-bottom: 2.42rem
+        padding-bottom: 2rem
 
-      color: $primary
+      &__heading
+        margin-bottom: 0.64rem
 
-    &__value
-      font-size: 1.07rem
-      line-height: 1.43rem
+        font-family: "Yeseva One", cursive
+        font-size: 1.286rem
+        line-height: 1.78rem
+        text-transform: uppercase
 
-  &-pagination
-    &-bullet
-      background-color: rgba($light, 0.3)
+        color: $primary
 
-      &-active
-        background-color: $light
+      &__value
+        font-size: 1.07rem
+        line-height: 1.43rem
 
-  &-button
-    &-prev, &-next
-      top: auto
-      bottom: 0
+    &-pagination
+      &-bullet
+        background-color: rgba($light, 0.3)
 
-      width: 42px
-      height: 14px
+        &-active
+          background-color: $light
 
-      &::after
-        display: none
+    &-button
+      &-prev, &-next
+        top: auto
+        bottom: 0
 
-    &-prev
-      left: 0
+        width: 42px
+        height: 14px
 
-      background: url("../img/interface/arrow_prev.svg") no-repeat center
+        &::after
+          display: none
 
-    &-next
-      background: url("../img/interface/arrow_next.svg") no-repeat center
+      &-prev
+        left: 0
+
+        background: url("../img/interface/arrow_prev.svg") no-repeat center
+
+      &-next
+        background: url("../img/interface/arrow_next.svg") no-repeat center
 
