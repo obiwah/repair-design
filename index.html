@@ -56,7 +56,7 @@
   </section>
   <!-- /.hero -->
   
-  <section class="section section--dark projects">
+  <section class="section section--dark projects projects__section">
     <div class="container">
       <div class="row">
         <div class="col-50">
@@ -173,13 +173,39 @@
   
 	<section class="section control">
 		<div class="container">
-			<div class="section-title">
+			<div class="section-title section-title--light control__section-title">
 				<h2 class="section-title__heading">онлайн контроль</h2>
 				<div class="section-title__image">
 					<img src="img/icons/video_ico.svg" alt="">
 				</div>
 			</div>
 			<!-- /.section-title -->
+      <div class="control__video video">
+        <img class="video__play" src="img/icons/play_ico.svg" alt="play icon">
+      </div>
+      <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах.
+        В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире.
+        Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку
+        на трансляцию.</p>
+      
+      <form action="#" class="form control__form">
+        <div class="control__input-group">
+          <label class="label form__label control__label" for="control-user-name">Имя</label>
+          <input id="control-user-name" class="input input--dark form__input control__input" type="text"
+                 placeholder="Как вас зовут:">
+        </div>
+        <div class="control__input-group">
+          <label class="label form__label control__label" for="control-user-phone">Телефон</label>
+          <input id="control-user-phone" class="input input--dark form__input control__input" type="tel"
+                 placeholder="Ваш номер телефона:">
+        </div>
+        <button class="btn btn--primary control__btn">Отправить</button>
+        <div class="policy control__policy">
+          <input class="policy__checkbox" type="checkbox" name="policy-checkbox" id="control-policy-checkbox" checked>
+          <label class="policy__label control__policy-label" for="control-policy-checkbox">Я соглашаюсь с обработкой
+            данных</label>
+        </div>
+      </form>
 		</div>
 		<!-- /.container -->
 	</section>
@@ -352,16 +378,16 @@
 	</section>
 	<!-- /.section design -->
 
-<!--  <section class="section section&#45;&#45;dark steps steps__section">-->
-<!--    <div class="container">-->
-<!--      <div class="row">-->
-<!--        <div class="col-40">-->
-<!--          <div class="section-title section-title&#45;&#45;left">-->
-<!--            <h4 class="section-title__subheading">как мы работаем</h4>-->
-<!--            <h2 class="section-title__heading section-title__heading&#45;&#45;primary">6 шагов<span-->
-<!--                class="section-title__word steps__word">до цели</span></h2>-->
-<!--          </div>-->
-<!--          -->
+  <section class="section section--dark steps steps__section">
+    <div class="container">
+      <div class="row">
+        <div class="col-40">
+          <div class="section-title section-title--left">
+            <h4 class="section-title__subheading">как мы работаем</h4>
+            <h2 class="section-title__heading section-title__heading--primary">6 шагов<span
+                class="section-title__word steps__word">до цели</span></h2>
+          </div>
+          
 <!--          &lt;!&ndash; Slider main container &ndash;&gt;-->
 <!--          <div class="steps__swiper-container">-->
 <!--            &lt;!&ndash; Additional required wrapper &ndash;&gt;-->
@@ -381,21 +407,22 @@
 <!--            <div class="steps__swiper-button-prev">(</div>-->
 <!--            <div class="steps__swiper-button-next">)</div>-->
 <!--          </div>-->
-<!--        -->
-<!--        </div>-->
-<!--        &lt;!&ndash; /.col-40 &ndash;&gt;-->
-<!--        -->
-<!--        <col-60>-->
-<!--        -->
-<!--        </col-60>-->
-<!--      </div>-->
-<!--      &lt;!&ndash; /.row &ndash;&gt;-->
-<!--    </div>-->
-<!--    &lt;!&ndash; /.container &ndash;&gt;-->
-<!--  -->
-<!--  -->
-<!--  -->
-<!--  </section>-->
+        
+        </div>
+        <!-- /.col-40 -->
+        
+        <div class="col-60">
+        
+        </div>
+        <!-- /.col-60 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  
+  
+  
+  </section>
   <!-- /.section steps -->
   
   <a class="scroll-up scroll scroll--invisible" href="#hero"><span class="scroll__text">в начало</span></a>
@@ -406,11 +433,13 @@
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="#" class="form modal__form">
         <label class="label form__label label--light" for="user-name">Имя</label>
-        <input id="user-name" class="input form__input modal__input" type="text" placeholder="Как вас зовут:">
+        <input id="user-name" class="input input--light form__input modal__input" type="text"
+               placeholder="Как вас зовут:">
         <label class="label form__label label--light" for="user-phone">Телефон</label>
-        <input id="user-phone" class="input form__input modal__input" type="tel" placeholder="Ваш номер телефона:">
+        <input id="user-phone" class="input input--light form__input modal__input" type="tel"
+               placeholder="Ваш номер телефона:">
         <label class="label form__label label--light" for="user-email">Email</label>
-        <input id="user-email" class="input form__input modal__input" type="email" placeholder="Ваш email">
+        <input id="user-email" class="input input--light form__input modal__input" type="email" placeholder="Ваш email">
         <div class="policy modal__policy">
           <input class="policy__checkbox" type="checkbox" name="policy-checkbox" id="policy-checkbox" checked>
           <label class="policy__label" for="policy-checkbox">Я соглашаюсь с обработкой данных</label>
