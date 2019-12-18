@@ -25,12 +25,14 @@
 
 $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	let $modal =  $(`.modal`),
-			$modalBtn = $(`[data-toggle=modal]`),
+			$modalBtns = $(`[data-toggle=modal]`),
 			$closeBtn = $(`.modal__close`),
 			$scrollUpBtn = $(`.scroll-up`);
 
-	$modalBtn.click(function() {
-		$modal.addClass(`modal--visible`);
+	$modalBtns.click(function() {
+		$modal.removeClass(`animated faster fadeOut`)
+					.addClass(`animated faster fadeIn`)
+					.addClass(`modal--visible`);
 
 		$modal.click((clickEvent) => {
 			if (clickEvent.target.classList.contains(`modal`)) modalClose();
@@ -44,14 +46,21 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	$closeBtn.click(modalClose);
 
 	function modalClose () {
-		$modal.removeClass(`modal--visible`);
+		$modal.removeClass(`animated faster fadeIn`)
+					.addClass(`animated faster fadeOut`)
+					.removeClass(`modal--visible`);
 	}
 
+	//visibility and animation options for .scroll-up element
 	$(document).scroll((scrollEvent) => {
 		if (scrollEvent.originalEvent.target.defaultView.scrollY > 450 ) {
-			$scrollUpBtn.removeClass(`scroll--invisible`)
+			$scrollUpBtn.removeClass(`animated fadeOutRight`)
+									.addClass(`animated fadeInRight`)
+									.removeClass(`scroll--invisible`);
 		} else {
-			$scrollUpBtn.addClass(`scroll--invisible`);
+			$scrollUpBtn.removeClass(`animated fadeInRight`)
+									.addClass(`animated fadeOutRight`)
+									.addClass(`scroll--invisible`);
 		}
 	});
 
@@ -96,9 +105,13 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 
 	new WOW().init();
 
-	$modalBtn.hover(() => {
-		$modalBtn.addClass(`animated pulse`);
-	}, () => {
-		$modalBtn.removeClass(`animated pulse`);
+	// modal buttons animation
+	$modalBtns.each((i, btn) => {
+		$(btn).hover(() => {
+			$(btn).addClass(`animated pulse`);
+		}, () => {
+			$(btn).removeClass(`animated pulse`);
+		});
 	});
+
 });
