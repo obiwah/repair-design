@@ -35,12 +35,13 @@
 
   font-size: 1.285rem
 
-  color: $light
   border: none
   border-bottom: 1px solid rgba($light, 0.15)
   background-color: transparent
 
   &--light
+    color: $light
+
     &::placeholder
       color: $light
 
@@ -112,6 +113,14 @@
       content: ""
 
       background: url("../img/interface/arrow_up.svg") no-repeat center
+
+.invalid
+  color: tomato
+
+.input
+  &.invalid
+    border-bottom: 1px solid tomato
+
 
 
 
