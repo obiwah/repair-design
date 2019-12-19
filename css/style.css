@@ -1154,6 +1154,9 @@ img {
   padding: 4.485rem 0;
   background-color: #181818;
 }
+.footer__map {
+  margin-bottom: 4rem;
+}
 
 @media screen and (max-width: 1350px) {
   .nav__item {
