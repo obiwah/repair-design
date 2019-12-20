@@ -19,7 +19,6 @@ img
 
   &__text
     max-width: 40.785rem
-    margin: auto auto 4.285rem
 
     font-size: 1.428rem
     line-height: 2.42rem
@@ -188,6 +187,51 @@ img
 
     color: $light
     background-color: $primary
+
+  &__person
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+  &__fullname
+    flex-basis: 60%
+    padding-left: 2rem
+    font-family: "Yeseva One", cursive
+    font-size: 1.29rem
+    line-height: 1.64rem
+
+    color: $black
+
+  &__feedback
+    margin-top: 2rem
+    font-size: 1.07rem
+    line-height: 1.93rem
+
+    color: $secondary
+
+  &__parameters
+    display: flex
+    align-items: center
+    width: fit-content
+    font-family: "Yeseva One", cursive
+    font-size: 1.43rem
+    line-height: 2rem
+
+    color: $light
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3)
+
+  &__parameter
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    padding: 1rem 2rem 1rem 1.5rem
+    background-color: $primary
+
+  &__parameter:first-of-type
+    margin-right: 1px
+
+  &__ico
+    margin-right: 1rem
 
 @media screen and (max-width: 760px)
   .card

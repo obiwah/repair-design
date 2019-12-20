@@ -523,7 +523,6 @@ img {
 }
 .section__text {
   max-width: 40.785rem;
-  margin: auto auto 4.285rem;
   font-size: 1.428rem;
   line-height: 2.42rem;
   text-align: center;
@@ -669,6 +668,48 @@ img {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #E3B873;
+}
+.card__person {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card__fullname {
+  flex-basis: 60%;
+  padding-left: 2rem;
+  font-family: "Yeseva One", cursive;
+  font-size: 1.29rem;
+  line-height: 1.64rem;
+  color: #181818;
+}
+.card__feedback {
+  margin-top: 2rem;
+  font-size: 1.07rem;
+  line-height: 1.93rem;
+  color: #959595;
+}
+.card__parameters {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-family: "Yeseva One", cursive;
+  font-size: 1.43rem;
+  line-height: 2rem;
+  color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+}
+.card__parameter {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem 2rem 1rem 1.5rem;
+  background-color: #E3B873;
+}
+.card__parameter:first-of-type {
+  margin-right: 1px;
+}
+.card__ico {
+  margin-right: 1rem;
 }
 
 @media screen and (max-width: 760px) {
@@ -918,6 +959,9 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
 }
+.control__text {
+  margin: auto auto 4.285rem;
+}
 .control__text::before {
   margin: auto auto 2.5rem;
 }
@@ -1128,14 +1172,26 @@ img {
   background: #E3B873 url("../img/icons/briefcase_ico.svg") no-repeat center;
 }
 .team__text {
-  margin-top: 3.79rem;
+  margin: 3.79rem auto 0;
 }
 .team__text::before {
   margin: auto auto 1.21rem;
 }
 
 .clients__section {
-  height: 300px;
+  padding-bottom: 30rem;
+}
+.clients__description {
+  max-width: 25.71rem;
+  margin-top: 1.74rem;
+  margin-bottom: 9.72rem;
+}
+.clients__card {
+  padding: 1.5rem;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.04);
+}
+.clients__image {
+  border-radius: 50%;
 }
 
 .footer {
