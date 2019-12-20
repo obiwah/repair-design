@@ -1221,6 +1221,12 @@ img {
   padding: 4.485rem 0;
   background-color: #181818;
 }
+.footer__map {
+  max-width: 66.07rem;
+  height: 33.21rem;
+  margin: 0 auto 4.64rem;
+}
+
 @media screen and (max-width: 1350px) {
   .nav__item {
     margin-right: 1rem;

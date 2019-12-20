@@ -151,4 +151,28 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		placeholder: "+7 (___) ___-__-__"
 	});
 
+	ymaps.ready(initMap);
+	function initMap(){
+		// Создание карты.
+		let yandexMap = new ymaps.Map("yandex-map", {
+			// Координаты центра карты.
+			// Порядок по умолчанию: «широта, долгота».
+			// Чтобы не определять координаты центра карты вручную,
+			// воспользуйтесь инструментом Определение координат.
+			center: [47.244734, 39.723227],
+			// Уровень масштабирования. Допустимые значения:
+			// от 0 (весь мир) до 19.
+			zoom: 17
+		});
+
+		let decorum = new ymaps.Placemark([47.244734, 39.723227], {}, {
+			iconLayout: 'default#image',
+			iconImageHref: 'img/icons/locator.png',
+			iconImageSize: [32, 32],
+			// iconImageOffset: [-3, -42]
+		});
+
+		yandexMap.geoObjects.add(decorum);
+	}
+
 });
