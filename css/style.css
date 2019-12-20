@@ -521,6 +521,22 @@ img {
 .section {
   padding: 60px 0;
 }
+.section__text {
+  max-width: 40.785rem;
+  margin: auto auto 4.285rem;
+  font-size: 1.428rem;
+  line-height: 2.42rem;
+  text-align: center;
+}
+.section__text::before {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 2px;
+  margin: auto auto 2.5rem;
+  background-color: #E3B873;
+  border-radius: 30px;
+}
 .section--dark {
   color: #ffffff;
   background-color: #131313;
@@ -623,9 +639,37 @@ img {
   background-color: #E3B873;
 }
 .card__badge {
-  max-width: 19.43rem;
-  margin-top: -10rem;
+  position: relative;
+  max-width: 16.64rem;
+  margin: -7rem auto 0;
+  padding-top: 1.57rem;
   background-color: #ffffff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+.card__name {
+  margin: 0;
+  font-family: "Yeseva One", cursive;
+  font-size: 1.29rem;
+  line-height: 1.79rem;
+  color: #181818;
+}
+.card__occupation {
+  margin-top: 0.64rem;
+  font-size: 1.29rem;
+  line-height: 1.86rem;
+  color: #959595;
+}
+.card__experience {
+  display: block;
+  margin-top: 1.71rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Yeseva One", cursive;
+  font-size: 0.93rem;
+  line-height: 1.43rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #E3B873;
 }
 
 @media screen and (max-width: 760px) {
@@ -875,22 +919,6 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
 }
-.control__text {
-  max-width: 40.785rem;
-  margin: auto auto 4.285rem;
-  font-size: 1.428rem;
-  line-height: 2.42rem;
-  text-align: center;
-}
-.control__text::before {
-  content: "";
-  display: block;
-  width: 55px;
-  height: 2px;
-  margin: auto auto 2.5rem;
-  background-color: #E3B873;
-  border-radius: 30px;
-}
 .control__form {
   display: flex;
   flex-wrap: wrap;
@@ -1096,6 +1124,9 @@ img {
 }
 .team__card--brigadier::before {
   background: #E3B873 url("../img/icons/briefcase_ico.svg") no-repeat center;
+}
+.team__text {
+  margin-top: 3.79rem;
 }
 
 .clients__section {

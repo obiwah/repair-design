@@ -17,6 +17,25 @@ img
 .section
   padding: 60px 0
 
+  &__text
+    max-width: 40.785rem
+    margin: auto auto 4.285rem
+
+    font-size: 1.428rem
+    line-height: 2.42rem
+    text-align: center
+
+    &::before
+      content: ''
+      display: block
+      width: 55px
+      height: 2px
+
+      margin: auto auto 2.5rem
+
+      background-color: $primary
+      border-radius: 30px
+
   &--dark
     color: $light
     background-color: $dark
@@ -133,10 +152,44 @@ img
     background-color: $primary
 
   &__badge
-    max-width: 19.43rem
-    margin-top: -10rem
+    position: relative
+
+    max-width: 16.64rem
+    margin: -7rem auto 0
+    padding-top: 1.57rem
 
     background-color: $light
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05)
+
+  &__name
+    margin: 0
+
+    font-family: "Yeseva One", cursive
+    font-size: 1.29rem
+    line-height: 1.79rem
+
+    color: $black
+
+  &__occupation
+    margin-top: 0.64rem
+    font-size: 1.29rem
+    line-height: 1.86rem
+
+    color: $secondary
+
+  &__experience
+    display: block
+    margin-top: 1.71rem
+    padding-top: 1rem
+    padding-bottom: 1rem
+
+    font-family: "Yeseva One", cursive
+    font-size: 0.93rem
+    line-height: 1.43rem
+    text-transform: uppercase
+
+    color: $light
+    background-color: $primary
 
 @media screen and (max-width: 760px)
   .card
