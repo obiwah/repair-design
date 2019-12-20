@@ -533,7 +533,6 @@ img {
   display: block;
   width: 55px;
   height: 2px;
-  margin: auto auto 2.5rem;
   background-color: #E3B873;
   border-radius: 30px;
 }
@@ -919,6 +918,9 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
 }
+.control__text::before {
+  margin: auto auto 2.5rem;
+}
 .control__form {
   display: flex;
   flex-wrap: wrap;
@@ -1128,6 +1130,9 @@ img {
 .team__text {
   margin-top: 3.79rem;
 }
+.team__text::before {
+  margin: auto auto 1.21rem;
+}
 
 .clients__section {
   height: 300px;
@@ -1182,14 +1187,40 @@ img {
   margin: auto;
   padding: 1.285rem 4.785rem;
 }
+.footer__contacts {
+  margin: 3.71rem auto;
+  text-align: center;
+}
+.footer__address {
+  max-width: 42.07rem;
+  margin: auto;
+  font-family: "Yeseva One", cursive;
+  font-size: 1.43rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  width: 5.07rem;
+  margin: 1.86rem auto 0;
+}
+.footer__link {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.footer--email {
+  background: #E3B873 url("../img/icons/mail_ico.svg") no-repeat center;
+}
+.footer--instagram {
+  background: #E3B873 url("../img/icons/instagram_ico.svg") no-repeat center;
+}
 .footer__menu {
   padding: 4.485rem 0;
   background-color: #181818;
 }
-.footer__map {
-  margin-bottom: 4rem;
-}
-
 @media screen and (max-width: 1350px) {
   .nav__item {
     margin-right: 1rem;
