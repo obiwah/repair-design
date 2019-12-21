@@ -110,10 +110,6 @@ img
         margin: 0 10px
         background-color: $primary
 
-@media screen and (max-width: 576px)
-  .title
-    font-size: 1.64rem
-
 .card
   &__text
     position: relative
@@ -253,7 +249,7 @@ img
       &__text
         margin-bottom: 0
 
-@media screen and (max-width: 760px)
+@media screen and (max-width: 768px)
   .card
     &__text
       margin-top: -13rem
@@ -276,6 +272,23 @@ img
         line-height: 1.93rem
 
         color: $light
+
+      &--left
+        text-align: center
+
+      &__word
+        display: inline
+
+        &::after
+          content: ""
+          width: 0
+
+      &__text
+        margin-right: 0
+
+@media screen and (max-width: 576px)
+  .title
+    font-size: 1.64rem
 
 
 

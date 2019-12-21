@@ -66,7 +66,6 @@
       & img
         max-width: 679px
         width: 100%
-        //padding-left: 6rem
 
     &-pagination
       width: fit-content
@@ -116,8 +115,14 @@
 
 @media screen and (max-width: 768px)
   .projects
+    &__main
+      margin-right: 0
 
-    &__img
+    &__word
+      &::after
+        margin-left: 0
+
+    &__info
       order: 1
 
 
