@@ -21,19 +21,14 @@
   &-60
     flex-basis: 60%
 
-
 .column
   display: flex
   flex-direction: column
   justify-content: flex-start
   flex-wrap: wrap
 
-  @media screen and (max-width: 992px)
-    .row
-      &-50
+@media screen and (max-width: 992px)
 
-        &:first-of-type
-          margin-right: 0
 
 @media screen and (max-width: 768px)
   .row
@@ -46,8 +41,6 @@
   .column
     flex-wrap: nowrap
 
-    .row-50:nth-of-type(2)
-      order: 1
   .row
     &-50
       width: 100%

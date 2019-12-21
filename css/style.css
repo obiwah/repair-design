@@ -493,11 +493,6 @@ template {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 992px) {
-  .column .row-50:first-of-type {
-    margin-right: 0;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .row {
@@ -511,9 +506,6 @@ template {
 
   .column {
     flex-wrap: nowrap;
-  }
-  .column .row-50:nth-of-type(2) {
-    order: 1;
   }
 
   .row-50 {
@@ -1090,6 +1082,11 @@ img {
   }
   .projects .swiper-slide__text:last-of-type {
     margin-bottom: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects__img {
+    order: 1;
   }
 }
 .control__section-title {
