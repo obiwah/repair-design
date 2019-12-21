@@ -487,6 +487,22 @@ template {
   flex-basis: 60%;
 }
 
+.row-50 {
+  border: 1px solid grey;
+  width: 40%;
+}
+.row-50:last-of-type {
+  width: 679px;
+  margin-left: 5.2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 768px) {
   .row {
     flex-direction: column;
@@ -495,6 +511,17 @@ template {
 
   .col {
     margin-bottom: 4.29em;
+  }
+
+  .column {
+    flex-wrap: nowrap;
+  }
+  .column .row-50:nth-of-type(2) {
+    order: 1;
+  }
+
+  .row-50 {
+    width: 100%;
   }
 }
 *, *::before, *::after {
@@ -966,29 +993,39 @@ img {
   }
 }
 .projects__section {
+  padding-top: 9.09rem;
+}
+.projects__column {
+  height: 42rem;
+}
+.projects__section {
   padding-bottom: 30rem;
 }
 .projects__heading {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.93rem;
+  line-height: 2.64rem;
   letter-spacing: -0.07em;
 }
 .projects__word::after {
-  margin-left: 2rem;
+  margin-left: 2.5rem;
 }
-.projects .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 0;
-  width: auto;
+.projects__text {
+  max-width: 31.57rem;
+  margin-bottom: 2rem;
 }
 .projects .swiper-slide {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
 }
 .projects .swiper-slide__text {
-  flex-basis: 50%;
-  margin-bottom: 2.42rem;
-  padding-bottom: 2rem;
+  flex-basis: 39.5%;
+  margin-bottom: 1.2rem;
 }
 .projects .swiper-slide__heading {
-  margin-bottom: 0.64rem;
+  margin-bottom: 0.5rem;
   font-family: "Yeseva One", cursive;
   font-size: 1.286rem;
   line-height: 1.78rem;

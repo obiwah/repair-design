@@ -21,6 +21,21 @@
   &-60
     flex-basis: 60%
 
+.row
+  &-50
+    border: 1px solid grey
+    width: 40%
+
+    &:last-of-type
+      width: 679px
+      margin-left: 5.2rem
+
+.column
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  flex-wrap: wrap
+
 @media screen and (max-width: 768px)
   .row
     flex-direction: column
@@ -28,3 +43,12 @@
 
   .col
     margin-bottom: 4.29em
+
+  .column
+    flex-wrap: nowrap
+
+    .row-50:nth-of-type(2)
+      order: 1
+  .row
+    &-50
+      width: 100%

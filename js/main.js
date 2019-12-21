@@ -100,8 +100,8 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 			$prev = $('.projects .swiper-button-prev'),
 			$bullets = $('.projects .swiper-pagination');
 
-	$bullets.css(`left`, $prev.width() + 30);
-	$next.css(`left`, $prev.width() + $bullets.width() + 60);
+	// $bullets.css(`left`, $prev.width() + 30);
+	// $next.css(`left`, $prev.width() + $bullets.width() + 60);
 
 	// initialize wow plugin
 	new WOW().init();
