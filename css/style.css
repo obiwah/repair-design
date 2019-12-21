@@ -683,17 +683,20 @@ img {
   color: #181818;
 }
 .card__feedback {
-  margin-top: 2rem;
+  margin-top: 1.15rem;
   font-size: 1.07rem;
-  line-height: 1.93rem;
+  line-height: 180%;
   color: #959595;
 }
 .card__parameters {
+  position: relative;
+  left: -1.5rem;
+  bottom: -3rem;
   display: flex;
   align-items: center;
   width: fit-content;
   font-family: "Yeseva One", cursive;
-  font-size: 1.43rem;
+  font-size: 1.21rem;
   line-height: 2rem;
   color: #ffffff;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
@@ -702,7 +705,7 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 1rem 2rem 1rem 1.5rem;
+  padding: 0.75rem 1.5rem 0.75rem 1.3rem;
   background-color: #E3B873;
 }
 .card__parameter:first-of-type {
@@ -1139,6 +1142,10 @@ img {
   margin-left: 6rem;
 }
 
+.steps {
+  display: none;
+}
+
 .team__card--brigadier::before, .team__card--designer::before, .team__card--manager::before {
   content: "";
   position: absolute;
@@ -1179,12 +1186,13 @@ img {
 }
 
 .clients__section {
-  padding-bottom: 30rem;
+  padding-bottom: 26.6rem;
 }
 .clients__description {
   max-width: 25.71rem;
-  margin-top: 1.74rem;
-  margin-bottom: 9.72rem;
+  margin-top: 1.2rem;
+  margin-bottom: 3.5rem;
+  line-height: 1.93rem;
 }
 .clients__card {
   padding: 1.5rem;
@@ -1248,7 +1256,7 @@ img {
   text-align: center;
 }
 .footer__address {
-  max-width: 42.07rem;
+  max-width: 36rem;
   margin: auto;
   font-family: "Yeseva One", cursive;
   font-size: 1.43rem;
@@ -1274,13 +1282,13 @@ img {
   background: #E3B873 url("../img/icons/instagram_ico.svg") no-repeat center;
 }
 .footer__menu {
-  padding: 4.485rem 0;
+  padding: 3.4rem 0;
   background-color: #181818;
 }
 .footer__map {
   max-width: 66.07rem;
   height: 33.21rem;
-  margin: 0 auto 4.64rem;
+  margin: -0.7rem auto 4.64rem;
 }
 
 @media screen and (max-width: 1350px) {
