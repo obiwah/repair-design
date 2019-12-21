@@ -79,7 +79,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	// 	grabCursor: true,
 	// });
 
-	//initialize swiper
+	//initialize swiper for projects section
 	let projectsSwiper = new Swiper ('.projects .swiper-container', {
 		// Optional parameters
 		loop: true,
@@ -103,6 +103,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	$bullets.css(`left`, $prev.width() + 30);
 	$next.css(`left`, $prev.width() + $bullets.width() + 60);
 
+	// initialize wow plugin
 	new WOW().init();
 
 	// modal buttons animation
@@ -151,6 +152,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		placeholder: "+7 (___) ___-__-__"
 	});
 
+	// initialize Yandex map
 	ymaps.ready(initMap);
 	function initMap(){
 		// Создание карты.
@@ -166,7 +168,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		});
 
 		let decorum = new ymaps.Placemark([47.244734, 39.723227], {}, {
-			iconLayout: 'default#image',
+			// iconLayout: 'default#image',
 			iconImageHref: 'img/icons/locator.png',
 			iconImageSize: [32, 32],
 			// iconImageOffset: [-3, -42]

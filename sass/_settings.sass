@@ -8,6 +8,10 @@ html
   font-size: 14px
   scroll-behavior: smooth
 
+@media screen and (max-width: 1200px)
+  html
+    font-size: 12px
+
 body
   font-family: "Futura Book", sans-serif
 
@@ -89,6 +93,7 @@ img
     &__text
       max-width: 31.57rem
       margin-bottom: 3rem
+      padding-right: 1rem
 
       font-size: 1.28rem
       line-height: 2.07rem
@@ -104,6 +109,10 @@ img
         height: 2px
         margin: 0 10px
         background-color: $primary
+
+@media screen and (max-width: 576px)
+  .title
+    font-size: 1.64rem
 
 .card
   &__text
@@ -238,6 +247,12 @@ img
   &__ico
     margin-right: 1rem
 
+@media screen and (max-width: 992px)
+  .section
+    &-title
+      &__text
+        margin-bottom: 0
+
 @media screen and (max-width: 760px)
   .card
     &__text
@@ -261,6 +276,8 @@ img
         line-height: 1.93rem
 
         color: $light
+
+
 
 
 

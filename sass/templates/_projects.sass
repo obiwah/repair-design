@@ -38,6 +38,9 @@
         line-height: 1.43rem
 
     &-pagination
+      top: auto
+      height: 14px
+
       &-bullet
         background-color: rgba($light, 0.3)
 
@@ -46,6 +49,7 @@
 
     &-button
       &-prev, &-next
+
         top: auto
         bottom: 0
 
@@ -64,5 +68,16 @@
         background: url("../img/interface/arrow_next.svg") no-repeat center
 
 @media (max-width: 992px)
+  .projects
+    & .swiper
+      &-slide
+        &__text
+          margin-bottom: 0
+          padding-bottom: 0
+
+        &:last-of-type
+          margin-bottom: 2rem
+    & .col-50 img
+      vertical-align: center
 
 
