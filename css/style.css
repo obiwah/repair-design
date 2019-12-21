@@ -487,20 +487,16 @@ template {
   flex-basis: 60%;
 }
 
-.row-50 {
-  border: 1px solid grey;
-  width: 40%;
-}
-.row-50:last-of-type {
-  width: 679px;
-  margin-left: 5.2rem;
-}
-
 .column {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 992px) {
+  .column .row-50:first-of-type {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -998,8 +994,12 @@ img {
 .projects__column {
   height: 42rem;
 }
+.projects__main {
+  width: 39%;
+  margin-right: 6rem;
+}
 .projects__section {
-  padding-bottom: 30rem;
+  padding-bottom: 22rem;
 }
 .projects__heading {
   margin-top: 0;
@@ -1015,6 +1015,12 @@ img {
   max-width: 31.57rem;
   margin-bottom: 2rem;
 }
+.projects__info {
+  width: 39%;
+}
+.projects__img {
+  width: 60%;
+}
 .projects .swiper-slide {
   display: flex;
   flex-wrap: wrap;
@@ -1024,8 +1030,12 @@ img {
   flex-basis: 39.5%;
   margin-bottom: 1.2rem;
 }
+.projects .swiper-slide__text:last-of-type {
+  margin-bottom: 7.05rem;
+}
 .projects .swiper-slide__heading {
   margin-bottom: 0.5rem;
+  padding-right: 1rem;
   font-family: "Yeseva One", cursive;
   font-size: 1.286rem;
   line-height: 1.78rem;
@@ -1036,12 +1046,22 @@ img {
   font-size: 1.07rem;
   line-height: 1.43rem;
 }
+.projects .swiper-slide img {
+  max-width: 679px;
+  width: 100%;
+}
 .projects .swiper-pagination {
-  top: auto;
-  height: 14px;
+  width: fit-content;
+  bottom: 0;
 }
 .projects .swiper-pagination-bullet {
+  height: 9.57px;
+  width: 9.57px;
+  margin: 0 17.54px 0 0 !important;
   background-color: rgba(255, 255, 255, 0.3);
+}
+.projects .swiper-pagination-bullet:last-of-type {
+  margin: 0 !important;
 }
 .projects .swiper-pagination-bullet-active {
   background-color: #ffffff;
@@ -1049,7 +1069,7 @@ img {
 .projects .swiper-button-prev, .projects .swiper-button-next {
   top: auto;
   bottom: 0;
-  width: 42px;
+  width: 40.51px;
   height: 14px;
 }
 .projects .swiper-button-prev::after, .projects .swiper-button-next::after {
@@ -1068,15 +1088,12 @@ img {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  .projects .swiper-slide:last-of-type {
-    margin-bottom: 2rem;
-  }
-  .projects .col-50 img {
-    vertical-align: center;
+  .projects .swiper-slide__text:last-of-type {
+    margin-bottom: 4rem;
   }
 }
 .control__section-title {
-  margin-top: -30rem;
+  margin-top: -28.7rem;
   margin-bottom: 2.214rem;
 }
 .control__video {
@@ -1136,6 +1153,11 @@ img {
   margin: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .control__section-title {
+    margin-top: 0;
+  }
+}
 .types__section-title {
   margin-bottom: 2rem;
 }

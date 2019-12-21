@@ -5,8 +5,12 @@
   &__column
     height: 42rem
 
+  &__main
+    width: 39%
+    margin-right: 6rem
+
   &__section
-    padding-bottom: 30rem
+    padding-bottom: 22rem
 
   &__heading
     margin-top: 0
@@ -24,9 +28,11 @@
     max-width: 31.57rem
     margin-bottom: 2rem
 
-  //& .swiper-container-horizontal>.swiper-pagination-bullets
-  //  bottom: 0
-  //  width: auto
+  &__info
+    width: 39%
+
+  &__img
+    width: 60%
 
   & .swiper
 
@@ -35,16 +41,16 @@
       flex-wrap: wrap
       align-content: flex-start
 
-      & img
-
-        //margin-left: 5rem
-
       &__text
         flex-basis: 39.5%
         margin-bottom: 1.2rem
 
+        &:last-of-type
+          margin-bottom: 7.05rem
+
       &__heading
         margin-bottom: 0.5rem
+        padding-right: 1rem
 
         font-family: "Yeseva One", cursive
         font-size: 1.286rem
@@ -57,23 +63,33 @@
         font-size: 1.07rem
         line-height: 1.43rem
 
+      & img
+        max-width: 679px
+        width: 100%
+        //padding-left: 6rem
+
     &-pagination
-      top: auto
-      height: 14px
+      width: fit-content
+      bottom: 0
 
       &-bullet
+        height: 9.57px
+        width: 9.57px
+        margin: 0 17.54px 0 0  !important
         background-color: rgba($light, 0.3)
+
+        &:last-of-type
+          margin: 0 !important
 
         &-active
           background-color: $light
 
     &-button
       &-prev, &-next
-
         top: auto
         bottom: 0
 
-        width: 42px
+        width: 40.51px
         height: 14px
 
         &::after
@@ -95,9 +111,9 @@
           margin-bottom: 0
           padding-bottom: 0
 
-        &:last-of-type
-          margin-bottom: 2rem
-    & .col-50 img
-      vertical-align: center
+          &:last-of-type
+            margin-bottom: 4rem
+
+@media screen and (max-width: 768px)
 
 
