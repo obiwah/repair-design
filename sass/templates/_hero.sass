@@ -119,4 +119,45 @@
   &--primary
     color: $primary
 
+@media (max-width: 992px)
+  .hero
+    &__instagram
+      display: none
+
+    &__content
+      margin-left: 0
+
+  .scroll
+    &__text
+      display: none
+
+    &::after
+      margin-left: 0
+
+@media (max-width: 576px)
+  .hero
+    &__content
+      max-width: 22.86rem
+
+    &__text
+      margin-bottom: 2.28rem
+
+      font-size: 1.29rem
+
+    &__btn
+      display: block
+      min-width: 22.86rem
+      margin-bottom: 1.85rem
+
+    &__scroll-down
+      display: none
+
+@media screen and (max-height: 545px)
+  .hero
+    &__scroll-down
+      display: none
+
+    &::after
+      display: none
+
 

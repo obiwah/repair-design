@@ -780,6 +780,30 @@ img {
   padding: 12px 23px;
 }
 
+@media screen and (max-width: 1350px) {
+  .nav__item {
+    margin-right: 1rem;
+  }
+
+  .contacts__phone {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .contacts__phone {
+    margin-right: 0;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .contacts__btn {
+    display: none;
+  }
+}
 .hero {
   position: relative;
   display: flex;
@@ -885,6 +909,46 @@ img {
   color: #E3B873;
 }
 
+@media (max-width: 992px) {
+  .hero__instagram {
+    display: none;
+  }
+  .hero__content {
+    margin-left: 0;
+  }
+
+  .scroll__text {
+    display: none;
+  }
+  .scroll::after {
+    margin-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .hero__content {
+    max-width: 22.86rem;
+  }
+  .hero__text {
+    margin-bottom: 2.28rem;
+    font-size: 1.29rem;
+  }
+  .hero__btn {
+    display: block;
+    min-width: 22.86rem;
+    margin-bottom: 1.85rem;
+  }
+  .hero__scroll-down {
+    display: none;
+  }
+}
+@media screen and (max-height: 545px) {
+  .hero__scroll-down {
+    display: none;
+  }
+  .hero::after {
+    display: none;
+  }
+}
 .projects__section {
   padding-bottom: 30rem;
 }
@@ -1291,72 +1355,14 @@ img {
   margin: -0.7rem auto 4.64rem;
 }
 
-@media screen and (max-width: 1350px) {
-  .nav__item {
-    margin-right: 1rem;
-  }
-
-  .contacts__phone {
-    margin-right: 1rem;
-  }
-}
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 992px) {
-  .nav {
-    display: none;
-  }
-
-  .hero__instagram {
-    display: none;
-  }
-  .hero__content {
-    margin-left: 0;
-  }
-
-  .scroll__text {
-    display: none;
-  }
-  .scroll::after {
-    margin-left: 0;
-  }
-}
 @media screen and (max-width: 576px) {
-  .contacts__phone {
-    margin-right: 0;
-    text-decoration: none;
-    color: #ffffff;
-  }
-  .contacts__btn {
-    display: none;
-  }
-
-  .hero__content {
-    max-width: 22.86rem;
-  }
-  .hero__text {
-    margin-bottom: 2.28rem;
-    font-size: 1.29rem;
-  }
-  .hero__btn {
-    display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem;
-  }
-  .hero__scroll-down {
-    display: none;
-  }
-
   .title {
     font-size: 1.64rem;
-  }
-}
-@media screen and (max-height: 545px) {
-  .hero__scroll-down {
-    display: none;
   }
 }
 
