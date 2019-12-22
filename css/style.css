@@ -486,6 +486,11 @@ template {
     margin-left: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .scroll {
+    background-color: #252525;
+  }
+}
 @media (max-width: 576px) {
   .scroll-down {
     display: none;
@@ -867,6 +872,11 @@ img {
     display: none;
   }
 }
+@media (max-width: 768px) {
+  .header {
+    background-color: #252525;
+  }
+}
 @media (max-width: 576px) {
   .contacts__phone {
     margin-right: 0;
@@ -982,6 +992,11 @@ img {
     margin-left: 0;
   }
 }
+@media (max-width: 768px) {
+  .hero::after {
+    background-color: #252525;
+  }
+}
 @media (max-width: 576px) {
   .hero__content {
     max-width: 22.86rem;
@@ -1042,7 +1057,7 @@ img {
   margin-bottom: 1.2rem;
 }
 .projects .swiper-slide__text:last-of-type {
-  margin-bottom: 7.05rem;
+  margin-bottom: 6.25rem;
 }
 .projects .swiper-slide__heading {
   margin-bottom: 0.5rem;
@@ -1062,24 +1077,27 @@ img {
   width: 100%;
 }
 .projects .swiper-pagination {
+  position: static;
+  display: inline-block;
   width: fit-content;
-  bottom: 0;
+  margin-left: 23.5px;
 }
 .projects .swiper-pagination-bullet {
   height: 9.57px;
   width: 9.57px;
-  margin: 0 17.54px 0 0 !important;
+  margin-right: 13px !important;
+  margin-bottom: 3px !important;
   background-color: rgba(255, 255, 255, 0.3);
 }
 .projects .swiper-pagination-bullet:last-of-type {
-  margin: 0 !important;
+  margin-right: 23.5px !important;
 }
 .projects .swiper-pagination-bullet-active {
   background-color: #ffffff;
 }
 .projects .swiper-button-prev, .projects .swiper-button-next {
-  top: auto;
-  bottom: 0;
+  position: static;
+  display: inline-block;
   width: 40.51px;
   height: 14px;
 }
@@ -1087,7 +1105,7 @@ img {
   display: none;
 }
 .projects .swiper-button-prev {
-  left: 0;
+  margin-left: 0.3rem;
   background: url("../img/interface/arrow_prev.svg") no-repeat center;
 }
 .projects .swiper-button-next {
@@ -1104,6 +1122,15 @@ img {
   }
 }
 @media screen and (max-width: 768px) {
+  .projects {
+    background-color: #252525;
+  }
+  .projects__section {
+    padding-bottom: 0;
+  }
+  .projects__column {
+    height: auto;
+  }
   .projects__main {
     margin-right: 0;
   }
@@ -1198,6 +1225,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  .control {
+    background-color: #252525;
+  }
   .control__section-title {
     margin-top: 0;
   }

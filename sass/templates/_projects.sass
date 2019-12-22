@@ -46,7 +46,7 @@
         margin-bottom: 1.2rem
 
         &:last-of-type
-          margin-bottom: 7.05rem
+          margin-bottom: 6.25rem
 
       &__heading
         margin-bottom: 0.5rem
@@ -68,26 +68,32 @@
         width: 100%
 
     &-pagination
+      position: static
+
+      display: inline-block
       width: fit-content
-      bottom: 0
+      margin-left: 23.5px
 
       &-bullet
         height: 9.57px
         width: 9.57px
-        margin: 0 17.54px 0 0  !important
+        margin-right: 13px !important
+        margin-bottom: 3px !important
         background-color: rgba($light, 0.3)
 
         &:last-of-type
-          margin: 0 !important
+          margin-right: 23.5px !important
 
         &-active
           background-color: $light
 
     &-button
       &-prev, &-next
-        top: auto
-        bottom: 0
-
+        position: static
+        display: inline-block
+        //top: auto
+        //bottom: 0
+        //
         width: 40.51px
         height: 14px
 
@@ -95,7 +101,7 @@
           display: none
 
       &-prev
-        left: 0
+        margin-left: 0.3rem
 
         background: url("../img/interface/arrow_prev.svg") no-repeat center
 
@@ -115,6 +121,14 @@
 
 @media screen and (max-width: 768px)
   .projects
+    background-color: $dark3
+
+    &__section
+      padding-bottom: 0
+
+    &__column
+      height: auto
+
     &__main
       margin-right: 0
 
@@ -144,8 +158,6 @@
 
     & .swiper
         &-slide
-          &__heading
-
           &__heading, &__value
             font-size: 1.17rem
             line-height: 1.58rem

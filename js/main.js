@@ -95,13 +95,13 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		// 	control: stepsSwiper.swiper,
 		// }
 	});
-
-	let $next = $('.projects .swiper-button-next'),
-			$prev = $('.projects .swiper-button-prev'),
-			$bullets = $('.projects .swiper-pagination');
-
-	$bullets.css(`left`, $prev.width() + 29.5);
-	$next.css(`left`, $prev.width() + $bullets.width() + 29.5 * 2);
+	//
+	// let $next = $('.projects .swiper-button-next'),
+	// 		$prev = $('.projects .swiper-button-prev'),
+	// 		$bullets = $('.projects .swiper-pagination');
+	//
+	// $bullets.css(`left`, $prev.width() + 29.5);
+	// $next.css(`left`, $prev.width() + $bullets.width() + 29.5 * 2);
 
 	// initialize wow plugin
 	new WOW().init();
