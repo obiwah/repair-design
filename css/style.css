@@ -1101,11 +1101,33 @@ img {
   .projects__main {
     margin-right: 0;
   }
+  .projects__heading {
+    margin-bottom: 1.83rem;
+    font-size: 1.83rem;
+    line-height: 2.5rem;
+  }
   .projects__word::after {
     margin-left: 0;
   }
+  .projects__text {
+    margin: 0 0 3rem;
+    padding: 0;
+    max-width: 100%;
+    font-size: 1.17rem;
+    line-height: 1.83rem;
+  }
+  .projects__img {
+    margin-bottom: 2.76rem;
+  }
   .projects__info {
     order: 1;
+  }
+  .projects .swiper-slide__heading, .projects .swiper-slide__value {
+    font-size: 1.17rem;
+    line-height: 1.58rem;
+  }
+  .projects .swiper-slide__text:last-of-type {
+    margin-bottom: 4rem;
   }
 }
 .control__section-title {
