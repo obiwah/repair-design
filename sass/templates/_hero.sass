@@ -65,23 +65,6 @@
     max-width: 5.71rem
     height: 100%
 
-  &__scroll-down
-    position: absolute
-    left: 0
-    bottom: 0
-    z-index: 3
-
-    display: flex
-    justify-content: center
-    align-items: center
-    min-width: 17.6rem
-    min-height: 6.92rem
-
-    &::after
-      content: ""
-
-      background: url("../img/interface/arrow_down.svg") no-repeat center
-
 .instagram
   display: flex
   justify-content: center
@@ -131,8 +114,8 @@
     &__text
       display: none
 
-    &::after
-      margin-left: 0
+      &::after
+        margin-left: 0
 
 @media (max-width: 576px)
   .hero
@@ -151,13 +134,4 @@
 
     &__scroll-down
       display: none
-
-@media screen and (max-height: 545px)
-  .hero
-    &__scroll-down
-      display: none
-
-    &::after
-      display: none
-
 

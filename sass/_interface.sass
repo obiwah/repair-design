@@ -87,7 +87,6 @@
     content: ""
     width: 29px
     height: 29px
-    margin-left: 12px
 
     border: 2px solid $primary
     border-radius: 50%
@@ -97,6 +96,24 @@
     visibility: hidden
 
     transition: 500ms
+
+  &-down
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: 3
+
+    display: flex
+    justify-content: center
+    align-items: center
+    min-width: 17.6rem
+    min-height: 6.92rem
+
+    &::after
+      content: ""
+      margin-left: 12px
+
+      background: url("../img/interface/arrow_down.svg") no-repeat center
 
   &-up
     position: fixed
@@ -111,6 +128,7 @@
 
     &::after
       content: ""
+      margin-left: 12px
 
       background: url("../img/interface/arrow_up.svg") no-repeat center
 
@@ -121,6 +139,19 @@
   &.invalid
     border-bottom: 1px solid tomato
 
+@media (max-width: 992px)
+  .scroll
+    &__text
+      display: none
+
+    &-up
+      &::after
+        margin-left: 0
+
+@media (max-width: 576px)
+  .scroll
+    &-down
+      display: none
 
 
 
