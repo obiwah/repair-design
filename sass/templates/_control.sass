@@ -8,7 +8,7 @@
 
     display: flex
 
-    margin: auto auto 4.428rem
+    margin: auto auto 4.45rem
     width: 58.357rem
     height: 31rem
 
@@ -24,11 +24,16 @@
 
       background: rgba(black, 0.8)
 
+  &__play
+    position: relative
+
+    margin: auto
+
   &__text
-    margin: auto auto 4.285rem
+    margin: auto auto 4.5rem
 
     &::before
-      margin: auto auto 2.5rem
+      margin: auto auto 1.83rem
 
   &__form
     display: flex
@@ -61,25 +66,39 @@
     &-label
       justify-content: center
 
-.video
-  &__play
-    position: relative
-
-    margin: auto
-
-
 @media (max-width: 992px)
   .control
     &__video
-      width: 60%
-      height: auto
+      width: 38.9rem
+      height: 20.67rem
 
 @media (max-width: 768px)
-    .control
-      color: $light
-      background-color: $dark3
+  .control
+    color: $light
+    background-color: $dark3
 
-      &__section-title
-        margin-top: 0
+    &__section-title
+      margin-top: 0
+
+    &__label
+      color: rgba($light, 0.5)
+
+    &__input
+      &::placeholder
+        color: $light
+
+    &__policy-label
+      color: $light
+
+@media (max-width: 576px)
+  .control
+    &__video
+      width: 340px
+      height: 207px
+
+    &__play
+      width: 37px
+      height: 37px
+
 
 

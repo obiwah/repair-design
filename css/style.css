@@ -1169,7 +1169,7 @@ img {
 .control__video {
   position: relative;
   display: flex;
-  margin: auto auto 4.428rem;
+  margin: auto auto 4.45rem;
   width: 58.357rem;
   height: 31rem;
   background: url("../img/video_mask.jpg") top left/cover no-repeat #131313;
@@ -1182,11 +1182,15 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
 }
+.control__play {
+  position: relative;
+  margin: auto;
+}
 .control__text {
-  margin: auto auto 4.285rem;
+  margin: auto auto 4.5rem;
 }
 .control__text::before {
-  margin: auto auto 2.5rem;
+  margin: auto auto 1.83rem;
 }
 .control__form {
   display: flex;
@@ -1218,15 +1222,10 @@ img {
   justify-content: center;
 }
 
-.video__play {
-  position: relative;
-  margin: auto;
-}
-
 @media (max-width: 992px) {
   .control__video {
-    width: 60%;
-    height: auto;
+    width: 38.9rem;
+    height: 20.67rem;
   }
 }
 @media (max-width: 768px) {
@@ -1236,6 +1235,25 @@ img {
   }
   .control__section-title {
     margin-top: 0;
+  }
+  .control__label {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .control__input::placeholder {
+    color: #ffffff;
+  }
+  .control__policy-label {
+    color: #ffffff;
+  }
+}
+@media (max-width: 576px) {
+  .control__video {
+    width: 340px;
+    height: 207px;
+  }
+  .control__play {
+    width: 37px;
+    height: 37px;
   }
 }
 .types__section-title {
