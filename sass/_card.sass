@@ -1,0 +1,151 @@
+.card
+  &__text
+    position: relative
+    margin: -9rem auto 0
+
+    max-width: 23.6rem
+
+    color: $secondary
+    background-color: $light
+    box-shadow: 0.71rem 0.71rem 1.43rem rgba(0, 0, 0, 0.03)
+
+  &__title
+    font-family: "Yeseva One", cursive
+    font-size: 1.29rem
+    line-height: 1.79rem
+    margin-top: 0
+
+    color: $dark2
+
+  &__list
+    padding: 0 0 0 1rem
+
+    font-size: 1.07em
+    line-height: 1.79rem
+
+    color: $secondary
+
+  &__item
+    &--mobile-showable
+      display: none
+
+  &__pricetag
+    position: absolute
+    left: 0
+    bottom: -1.79rem
+
+    font-family: "Yeseva One", cursive
+    font-size: 1.19rem
+    text-transform: uppercase
+
+    color: $light
+    background-color: $primary
+
+  &__badge
+    position: relative
+
+    max-width: 16.64rem
+    margin: -7rem auto 0
+    padding-top: 1.57rem
+
+    background-color: $light
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05)
+
+  &__name
+    margin: 0
+
+    font-family: "Yeseva One", cursive
+    font-size: 1.29rem
+    line-height: 1.79rem
+
+    color: $black
+
+  &__occupation
+    margin-top: 0.64rem
+    font-size: 1.29rem
+    line-height: 1.86rem
+
+    color: $secondary
+
+  &__experience
+    display: block
+    margin-top: 1.71rem
+    padding-top: 1rem
+    padding-bottom: 1rem
+
+    font-family: "Yeseva One", cursive
+    font-size: 0.93rem
+    line-height: 1.43rem
+    text-transform: uppercase
+
+    color: $light
+    background-color: $primary
+
+  &__person
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+  &__fullname
+    flex-basis: 60%
+    padding-left: 2rem
+    font-family: "Yeseva One", cursive
+    font-size: 1.29rem
+    line-height: 1.64rem
+
+    color: $black
+
+  &__feedback
+    margin-top: 1.15rem
+    font-size: 1.07rem
+    line-height: 180%
+
+    color: $secondary
+
+  &__parameters
+    position: relative
+    left: -1.5rem
+    bottom: -3rem
+
+    display: flex
+    align-items: center
+    width: fit-content
+
+    font-family: "Yeseva One", cursive
+    font-size: 1.21rem
+    line-height: 2rem
+
+    color: $light
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3)
+
+  &__parameter
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    padding: 0.75rem 1.5rem 0.75rem 1.3rem
+    background-color: $primary
+
+  &__parameter:first-of-type
+    margin-right: 1px
+
+  &__ico
+    margin-right: 1rem
+
+@media (max-width: 768px)
+  .card
+    &__text
+      margin-top: -13rem
+      margin-left: 0
+
+    &__item
+      &--mobile-hidable
+        display: none
+
+      &--mobile-showable
+        display: inline
+
+
+
+
+
+

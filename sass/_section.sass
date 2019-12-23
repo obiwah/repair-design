@@ -1,0 +1,132 @@
+.section
+  padding: 60px 0
+
+  &__text
+    max-width: 40.785rem
+
+    font-size: 1.428rem
+    line-height: 2.42rem
+    text-align: center
+
+    &::before
+      content: ''
+      display: block
+      width: 55px
+      height: 2px
+
+      background-color: $primary
+      border-radius: 30px
+
+  &--dark
+    color: $light
+    background-color: $dark
+
+  &-title
+    text-align: center
+
+    &--left
+      text-align: left
+
+    &__description
+      margin: 0 auto 3.4rem
+      max-width: 741px
+
+      font-size: 1.43rem
+      line-height: 1.93rem
+
+      color: $dark2
+
+    &--light
+      color: $light
+
+    &__heading
+      margin-bottom: 0.93rem
+
+      font-family: "Yeseva One", cursive
+      font-size: 1.43rem
+      line-height: 2rem
+      text-transform: uppercase
+
+      &--primary
+        color: $primary
+
+    &__subheading
+      margin-top: 0
+      margin-bottom: 1.29rem
+
+      font-family: 'Futura Demi', sans-serif
+      font-size: 1.07rem
+      line-height: 1.5rem
+      text-transform: uppercase
+
+    &__word
+      display: flex
+      align-items: center
+
+      &::after
+        content: ''
+        width: 92px
+        height: 1px
+
+        background-color: $primary
+
+    &__text
+      max-width: 31.57rem
+      margin-bottom: 3rem
+      padding-right: 1rem
+
+      font-size: 1.28rem
+      line-height: 2.07rem
+
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+
+      &::before, &::after
+        content: ""
+        width: 32px
+        height: 2px
+        margin: 0 10px
+        background-color: $primary
+
+@media screen and (max-width: 992px)
+  .section
+    &-title
+      &__text
+        margin-bottom: 0
+
+@media (max-width: 768px)
+  .section
+    &-title
+      &__description
+        max-width: 21.86rem
+        margin: 1.64rem auto 2.79rem
+
+        font-size: 1.07rem
+        line-height: 1.93rem
+
+        color: $light
+
+      &--left
+        text-align: center
+
+      &__word
+        display: inline
+
+        &::after
+          content: ""
+          width: 0
+
+      &__text
+        margin-right: 0
+
+    &__text
+      font-size: 1.17rem
+      line-height: 1.83rem
+
+
+
+
+
+
