@@ -116,7 +116,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	});
 
 	//form validation
-	$(`form`).validate({
+	$(`modal__form`).validate({
 		rules: {
 			// simple rule, converted to {required:true}
 			userName: {
