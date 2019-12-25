@@ -29,21 +29,21 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 			$closeBtn = $(`.modal__close`),
 			$scrollUpBtn = $(`.scroll-up`);
 
-	$modalBtns.click(function() {
+	$modalBtns.on(`click`, function() {
 		$modal.removeClass(`animated faster fadeOut`)
 					.addClass(`animated faster fadeIn`)
 					.addClass(`modal--visible`);
 
-		$modal.click((clickEvent) => {
+		$modal.on(`click`,(clickEvent) => {
 			if (clickEvent.target.classList.contains(`modal`)) modalClose();
 		});
 
-		$(document).keydown((keyEvent) => {
+		$(document).on(`keydown`, (keyEvent) => {
 			if (keyEvent.key === `Escape`) modalClose();
 		});
 	});
 
-	$closeBtn.click(modalClose);
+	$closeBtn.on(`click`, modalClose);
 
 	function modalClose () {
 		$modal.removeClass(`animated faster fadeIn`)
@@ -52,7 +52,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	}
 
 	//visibility and animation options for .scroll-up element
-	$(document).scroll((scrollEvent) => {
+	$(document).on(`scroll`, (scrollEvent) => {
 		if (scrollEvent.originalEvent.target.defaultView.scrollY > 450 ) {
 			$scrollUpBtn.removeClass(`animated fadeOutRight`)
 									.addClass(`animated fadeInRight`)
@@ -108,7 +108,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 
 	// modal buttons animation
 	$modalBtns.each((i, btn) => {
-		$(btn).hover(() => {
+		$(btn).on(`hover`, () => {
 			$(btn).addClass(`animated pulse`);
 		}, () => {
 			$(btn).removeClass(`animated pulse`);
