@@ -116,8 +116,8 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	});
 
 	//form validation
-	$(`form`).each(function (i, element) {
-		$(element).validate({
+	$(`form`).each(function (i, form) {
+		$(form).validate({
 			rules: {
 				// simple rule, converted to {required:true}
 				userName: {
@@ -145,8 +145,22 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 				}
 			},
 			errorClass: "invalid",
-			errorElement: "div"
-		})
+			errorElement: "div",
+			submitHandler: function(form) {
+				$.ajax({
+					type: `post`,
+					url: `send.php`,
+					data: $(form).serialize(),
+					success: function (response) {
+						console.log(response);
+						form.reset();
+					},
+					error: function (jqXHR, textStatus, errorThrown) {
+						console.error(`jqXHR: ${jqXHR}, textStatus: ${textStatus}, errorThrown: ${errorThrown}`);
+					}
+				})
+			},
+		});
 	});
 
 	//phone mask

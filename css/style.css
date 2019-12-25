@@ -1400,10 +1400,11 @@ img {
   margin-left: 6rem;
 }
 
-.steps {
-  display: none;
+@media (max-width: 768px) {
+  .steps {
+    display: none;
+  }
 }
-
 .team__card--brigadier::before, .team__card--designer::before, .team__card--manager::before {
   content: "";
   position: absolute;
