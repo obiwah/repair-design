@@ -116,35 +116,38 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	});
 
 	//form validation
-	$(`modal__form`).validate({
-		rules: {
-			// simple rule, converted to {required:true}
-			userName: {
-				required: true,
-				minlength: 2,
-				maxlength: 15
+	$(`form`).each(function (i, element) {
+		$(element).validate({
+			rules: {
+				// simple rule, converted to {required:true}
+				userName: {
+					required: true,
+					minlength: 2,
+					maxlength: 15
+				},
+				userPhone: "required",
+				// compound rule
+				userEmail: {
+					required: true,
+					email: true
+				}
 			},
-			userPhone: "required",
-			// compound rule
-			userEmail: {
-				required: true,
-				email: true
-			}
-		},
-		messages: {
-			userName: {
-				required: "Заполните поле",
-				minlength: "Имя не короче 2 букв",
-				maxlength: "Имя не длиннее 2 букв"
+			messages: {
+				userName: {
+					required: "Заполните поле",
+					minlength: "Имя не короче 2 букв",
+					maxlength: "Имя не длиннее 2 букв"
+				},
+				userPhone: "Заполните поле",
+				userEmail: {
+					required: "Заполните поле",
+					email: "Email должен быть в формате name@domain.com"
+				}
 			},
-			userPhone: "Заполните поле",
-			userEmail: {
-				required: "Заполните поле",
-				email: "Email должен быть в формате name@domain.com"
-			}
-		},
-		errorClass: "invalid",
-		errorElement: "div"
+			errorClass: "invalid",
+			errorElement: "div"
+		})
+
 	});
 
 	//phone mask

@@ -201,7 +201,7 @@
           Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку
           на трансляцию.</p>
         
-        <form action="#" class="form control__form">
+        <form class="form control__form" action="send.php" method="post">
           <div class="control__input-group">
             <label class="label form__label control__label" for="control-user-name">Имя</label>
             <input class="input input--dark form__input control__input" id="control-user-name" name="userName"
@@ -626,7 +626,7 @@
     <div class="container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
-        <form action="#" class="form footer__form">
+        <form class="form footer__form" action="send.php" method="post">
           <div class="input-group footer__input-group">
             <label class="label form__label label--light" for="footer-user-name">Имя</label>
             <input class="input input--light form__input footer__input" id="footer-user-name" name="userName"
@@ -639,7 +639,8 @@
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
             <label class="label form__label label--light" for="user-question">Вопрос</label>
-            <input class="input input--light form__input footer__input" id="user-question" type="text"
+            <input class="input input--light form__input footer__input" id="user-question"
+                   name="userQuestion"type="text"
                    placeholder="Я хочу спросить">
           </div>
           <div class="policy footer__policy">
