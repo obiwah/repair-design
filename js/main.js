@@ -147,7 +147,6 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 			errorClass: "invalid",
 			errorElement: "div"
 		})
-
 	});
 
 	//phone mask
@@ -179,5 +178,4 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 
 		yandexMap.geoObjects.add(decorum);
 	}
-
 });
