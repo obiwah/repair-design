@@ -104,7 +104,11 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	// $next.css(`left`, $prev.width() + $bullets.width() + 29.5 * 2);
 
 	// initialize wow plugin
-	new WOW().init();
+	let wow = new WOW({
+			mobile: false //don't play wow animation on mob devs
+		}
+	);
+	wow.init();
 
 	// modal buttons animation
 	$modalBtns.each((i, btn) => {
