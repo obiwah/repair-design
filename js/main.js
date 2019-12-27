@@ -116,7 +116,8 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	});
 
 	//form validation
-	$(`.modal__form`).validate({
+	$(`.form`).each(function(i, form) {
+		$(form).validate({
 			rules: {
 				// simple rule, converted to {required:true}
 				userName: {
@@ -151,15 +152,10 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 					url: `send.php`,
 					data: $(form).serialize(),
 					success: function (response) {
-						console.log(response);
-
-						// form.reset();
-
-						modalClose();
-
-
+						form.reset();
 						alert(`Форма отправлена, мы свяжемся с вами через 10 минут`);
 
+						if ($(form).hasClass('modal__form')) modalClose();
 					},
 					error: function (jqXHR, textStatus, errorThrown) {
 						console.error(`jqXHR: ${jqXHR}, textStatus: ${textStatus}, errorThrown: ${errorThrown}`);
@@ -167,6 +163,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 				})
 			},
 		});
+	});
 
 	//phone mask
 	$(`[type="tel"]`).mask(`+7 (000) 000-00-00`, {
