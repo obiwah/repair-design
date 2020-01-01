@@ -4,8 +4,8 @@ const {src, dest, watch, series} = require(`gulp`),
 	htmlMin = require('gulp-htmlmin'),
 	autoprefixer = require(`gulp-autoprefixer`),
 	cleanCss = require('gulp-clean-css'),
-	// tinypng = require('gulp-tinypng-compress');
-	imageMin = require('gulp-imagemin');
+	imageMin = require('gulp-imagemin'),
+	minifyJs = require('gulp-minify');
 
 // Static server
 function bs() {
@@ -68,23 +68,6 @@ function buildFonts (cb) {
 	cb();
 }
 
-// function buildImg (cb) {
-// 	src(`img/**/*`)
-// 		.pipe(tinypng({
-// 			key: `Czt8g91rBW7fnJJr4436g77F95nwjShY`,
-// 			sigFile: `img/.tinypng-sigs`,
-// 			summarise: true,
-// 			log: true,
-// 			parallel: true
-// 		}))
-// 		.pipe(dest(`dist/img`));
-//
-// 	src(`img/**/*.svg`)
-// 		.pipe(dest(`dist/img`));
-//
-// 	cb();
-// }
-
 function buildImg (cb) {
 	src(`img/**/*`)
 		.pipe(imageMin())
@@ -93,6 +76,20 @@ function buildImg (cb) {
 	cb();
 }
 
+function buildJs (cb) {
+	src(`js/**/*`)
+		.pipe(minifyJs({
+			noSource : true,
+			ext:{
+				min:'.js'
+			},
+			ignoreFiles: ['*.min.js']
+		}))
+		.pipe(dest(`dist/js`));
+
+	cb();
+}
+
 exports.serve = bs;
-exports.build = series(buildHtml, buildPhp, buildCss, buildFonts);
+exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildJs);
 exports.buildimg = buildImg;
