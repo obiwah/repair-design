@@ -24,7 +24,9 @@
     "gulp-sass": "^4.0.2"
   },
   "dependencies": {
+    "@cedx/gulp-php-minify": "^10.1.0",
     "browser-sync": "^2.26.7",
+    "gulp-htmlmin": "^5.0.1",
     "lodash.template": "^4.5.0"
   }
 }

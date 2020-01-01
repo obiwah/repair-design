@@ -1,8 +1,11 @@
+import {phpMinify} from '@cedx/gulp-php-minify';
 const {src, dest, watch, series} = require(`gulp`),
 	browserSync = require(`browser-sync`).create(),
 	sass = require(`gulp-sass`),
+	htmlMin = require('gulp-htmlmin'),
 	autoprefixer = require(`gulp-autoprefixer`),
 	cleanCss = require('gulp-clean-css');
+
 
 // Static server
 function bs() {
@@ -25,26 +28,40 @@ function serveSass() {
 		.pipe(browserSync.stream());
 }
 
-function buildHtml () {
-	return src(`*.html`)
-				.pipe(dest(`dist/`));
+function buildHtml (cb) {
+	src(`*.html`)
+		.pipe(htmlMin({
+			collapseWhitespace: true,
+			removeComments: true}))
+		.pipe(dest(`dist/`));
+
+	cb();
 }
 
-function buildPhp() {
-	return src(`*.php`)
-		.pipe(dest(`dist/`))
-		.pipe(src(`phpMailer/*.php`))
-		.pipe(dest(`dist/phpMailer/`))
+function buildPhp(cb) {
+	src(`*.php`)
+		.pipe(phpMinify())
+		.pipe(dest(`dist/`));
+	src(`phpMailer/*.php`).pipe(dest(`dist/phpMailer/`));
+
+	cb();
 }
 
-function buildCss() {
-	return src(`css/**/*.css`)
+function buildCss(cb) {
+	src(`css/style.css`)
 		.pipe(autoprefixer({ cascade: false }))
-		.pipe(dest(`dist/css`))
-		.pipe(src([`dist/css/**/*.css`, `!dist/css/**/*.min.css`]))
-		.pipe(cleanCss({compatibility: 'ie8'}))
-}
+		.pipe(cleanCss())
+		.pipe(dest(`dist/css`));
 
+	src([`css/**/*.css`, `!css/style.css`, `!css/**/*.min.css`])
+		.pipe(cleanCss())
+		.pipe(dest(`dist/css`));
+
+	src(`css/**/*.min.css`)
+		.pipe(dest(`dist/css`));
+
+	cb();
+}
 
 exports.serve = bs;
 exports.build = series(buildHtml, buildPhp, buildCss);
