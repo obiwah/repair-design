@@ -1,11 +1,9 @@
-import {phpMinify} from '@cedx/gulp-php-minify';
 const {src, dest, watch, series} = require(`gulp`),
 	browserSync = require(`browser-sync`).create(),
 	sass = require(`gulp-sass`),
 	htmlMin = require('gulp-htmlmin'),
 	autoprefixer = require(`gulp-autoprefixer`),
 	cleanCss = require('gulp-clean-css');
-
 
 // Static server
 function bs() {
@@ -39,9 +37,7 @@ function buildHtml (cb) {
 }
 
 function buildPhp(cb) {
-	src(`*.php`)
-		.pipe(phpMinify())
-		.pipe(dest(`dist/`));
+	src(`*.php`).pipe(dest(`dist/`));
 	src(`phpMailer/*.php`).pipe(dest(`dist/phpMailer/`));
 
 	cb();
@@ -63,5 +59,12 @@ function buildCss(cb) {
 	cb();
 }
 
+function buildFonts (cb) {
+	src(`fonts/**/**`)
+		.pipe(dest(`dist/fonts`));
+
+	cb();
+}
+
 exports.serve = bs;
-exports.build = series(buildHtml, buildPhp, buildCss);
+exports.build = series(buildHtml, buildPhp, buildFonts);
