@@ -3,7 +3,9 @@ const {src, dest, watch, series} = require(`gulp`),
 	sass = require(`gulp-sass`),
 	htmlMin = require('gulp-htmlmin'),
 	autoprefixer = require(`gulp-autoprefixer`),
-	cleanCss = require('gulp-clean-css');
+	cleanCss = require('gulp-clean-css'),
+	// tinypng = require('gulp-tinypng-compress');
+	imageMin = require('gulp-imagemin');
 
 // Static server
 function bs() {
@@ -66,5 +68,31 @@ function buildFonts (cb) {
 	cb();
 }
 
+// function buildImg (cb) {
+// 	src(`img/**/*`)
+// 		.pipe(tinypng({
+// 			key: `Czt8g91rBW7fnJJr4436g77F95nwjShY`,
+// 			sigFile: `img/.tinypng-sigs`,
+// 			summarise: true,
+// 			log: true,
+// 			parallel: true
+// 		}))
+// 		.pipe(dest(`dist/img`));
+//
+// 	src(`img/**/*.svg`)
+// 		.pipe(dest(`dist/img`));
+//
+// 	cb();
+// }
+
+function buildImg (cb) {
+	src(`img/**/*`)
+		.pipe(imageMin())
+		.pipe(dest(`dist/img`));
+
+	cb();
+}
+
 exports.serve = bs;
-exports.build = series(buildHtml, buildPhp, buildFonts);
+exports.build = series(buildHtml, buildPhp, buildCss, buildFonts);
+exports.buildimg = buildImg;
