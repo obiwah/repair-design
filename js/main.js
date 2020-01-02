@@ -82,6 +82,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	//initialize swiper for projects section
 	let projectsSwiper = new Swiper ('.projects .swiper-container', {
 		// Optional parameters
+		spaceBetween: 1,
 		loop: true,
 		navigation: {
 			nextEl: '.projects .swiper-button-next',
@@ -91,17 +92,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 			el: '.projects .swiper-pagination',
 			type: 'bullets',
 		},
-		// control: {
-		// 	control: stepsSwiper.swiper,
-		// }
 	});
-	//
-	// let $next = $('.projects .swiper-button-next'),
-	// 		$prev = $('.projects .swiper-button-prev'),
-	// 		$bullets = $('.projects .swiper-pagination');
-	//
-	// $bullets.css(`left`, $prev.width() + 29.5);
-	// $next.css(`left`, $prev.width() + $bullets.width() + 29.5 * 2);
 
 	// initialize wow plugin
 	let wow = new WOW({
@@ -197,7 +188,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 
 	//phone mask
 	$(`[type="tel"]`).mask(`+7 (000) 000-00-00`, {
-		placeholder: "+7 (___) ___-__-__"
+		// placeholder: "+7 (___) ___-__-__"
 	});
 
 	// initialize Yandex map

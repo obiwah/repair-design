@@ -10,15 +10,18 @@
   box-shadow: 0 5px 20px rgba(227, 184, 115, 0.5)
 
 .team
+  &__container
+    width: 73%
+
   &__section
-    margin-top: -35rem
+    margin-top: -33.5rem
 
   &__image
-    margin-bottom: 1.64rem
+    margin-bottom: 1.4rem
 
   &__description
     max-width: 32rem
-    margin-bottom: 5.9rem
+    margin-bottom: 5.7rem
 
   &__col
     text-align: center
@@ -26,7 +29,7 @@
   &__card
 
     &--manager
-     &::before
+      &::before
        @extend %team-before
 
        background: $primary url("../img/icons/idea_ico.svg") no-repeat center
@@ -44,10 +47,10 @@
         background: $primary url("../img/icons/briefcase_ico.svg") no-repeat center
 
   &__text
-    margin: 3.79rem auto 0
+    margin: 3.71rem auto 0
 
     &::before
-      margin: auto auto 1.21rem
+      margin: auto auto 0.5rem
 
 @media (max-width: 768px)
   .team

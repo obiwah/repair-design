@@ -20,12 +20,12 @@
       <div class="menu">
         <div class="logo menu__logo animated fadeInLeft">Repair Design Project</div>
         <nav class="nav menu__nav">
-          <a href="#hero" class="nav__item">Главная</a>
-          <a href="#projects" class="nav__item">Проекты</a>
-          <a href="#measuring" class="nav__item">Замер</a>
-          <a href="#team" class="nav__item">Команда</a>
-          <a href="#clients" class="nav__item">Отзывы</a>
-          <a href="#contscts" class="nav__item">Контакты</a>
+          <a class="nav__item" href="#hero">Главная</a>
+          <a class="nav__item" href="#projects">Проекты</a>
+          <a class="nav__item" href="#measuring">Замер</a>
+          <a class="nav__item" href="#team">Команда</a>
+          <a class="nav__item" href="#clients">Отзывы</a>
+          <a class="nav__item" href="#contscts">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -42,7 +42,7 @@
   <main>
     <section class="hero" id="hero">
       <div class="instagram hero__instagram">
-        <a class="instagram__link" href="#">Instagram</a>
+        <a class="instagram__link" href="https://www.instagram.com/remzubr">Instagram</a>
       </div>
       <div class="container">
         <div class="hero__content">
@@ -57,7 +57,7 @@
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a class="scroll-down scroll" href="#">листайте вниз</a>
+      <a class="scroll-down scroll" href="#measuring">листайте вниз</a>
     </section>
     <!-- /.hero -->
     
@@ -180,7 +180,7 @@
       </div>
       <!-- /.container -->
     </section>
-     /.section section-dark projects
+    <!-- /.section section-dark projects-->
     
     <section class="section control">
       <div class="container">
@@ -283,7 +283,7 @@
             <div class="card types__card">
               <img class="card__image" src="img/types/type_03.jpg" alt="Дизайнерский ремонт">
               <div class="card__text types__text">
-                <h3 class="card__title card__title">Дизайнерский ремонт</h3>
+                <h3 class="card__title types__title">Дизайнерский ремонт</h3>
                 <ul class="card__list types__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
                   <li class="card__item">Поклейка обоев</li>
@@ -399,41 +399,20 @@
       <div class="container">
         <div class="row">
           <div class="col-40">
-            <div class="section-title section-title--left">
-              <h4 class="section-title__subheading">как мы работаем</h4>
-              <h2 class="section-title__heading section-title__heading--primary">6 шагов<span
-                  class="section-title__word steps__word">до цели</span></h2>
-            </div>
-            
-            <!--          &lt;!&ndash; Slider main container &ndash;&gt;-->
-            <!--          <div class="steps__swiper-container">-->
-            <!--            &lt;!&ndash; Additional required wrapper &ndash;&gt;-->
-            <!--            <div class="steps__swiper-wrapper">-->
-            <!--              &lt;!&ndash; Slides &ndash;&gt;-->
-            <!--              <div class="steps__swiper-slide"><img src="img/steps/step_1.jpg" alt=""></div>-->
-            <!--              <div class="steps__swiper-slide">Slide 2</div>-->
-            <!--              <div class="steps__swiper-slide">Slide 3</div>-->
-            <!--              <div class="steps__swiper-slide">Slide 4</div>-->
-            <!--              <div class="steps__swiper-slide">Slide 5</div>-->
-            <!--              <div class="steps__swiper-slide">Slide 6</div>-->
-            <!--            </div>-->
-            <!--            &lt;!&ndash; If we need pagination &ndash;&gt;-->
-            <!--            <div class="steps__swiper-pagination"></div>-->
-            <!--            -->
-            <!--            &lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
-            <!--            <div class="steps__swiper-button-prev">(</div>-->
-            <!--            <div class="steps__swiper-button-next">)</div>-->
-            <!--          </div>-->
-          
+            <!--            <div class="section-title section-title&#45;&#45;left">-->
+            <!--              <h4 class="section-title__subheading">как мы работаем</h4>-->
+            <!--              <h2 class="section-title__heading section-title__heading&#45;&#45;primary">6 шагов<span-->
+            <!--                  class="section-title__word steps__word">до цели</span></h2>-->
           </div>
-          <!-- /.col-40 -->
-          
-          <div class="col-60">
-          
-          </div>
-          <!-- /.col-60 -->
         </div>
-        <!-- /.row -->
+        <!-- /.col-40 -->
+        
+        <div class="col-60">
+        
+        </div>
+        <!-- /.col-60 -->
+      </div>
+      <!-- /.row -->
       </div>
       <!-- /.container -->
     
@@ -442,7 +421,7 @@
     <!-- /.section steps -->
     
     <section class="section team team__section" id="team">
-      <div class="container">
+      <div class="container team__container">
         <div class="section-title section-title--light team__section-title">
           <h2 class="section-title__heading team__heading">Наша команда</h2>
           <div class="section-title__image team__image">
@@ -513,8 +492,7 @@
           </div>
           <!-- /.section-title__image -->
           <p class="section-title__description clients__description wow fadeInUp">80% наших клиентов рекомендуют нас
-            своим знакомым и
-            друзьям</p>
+            своим знакомым и друзьям</p>
         </div>
         <!-- /.section-title -->
         <div class="row">
