@@ -169,6 +169,32 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		});
 	});
 
+	//YouTube video embedding
+	$(`.control__play`).on(`click`, function onYouTubeIframeAPIReady() {	// This function creates an <iframe> (and
+		// YouTube player) after the API code downloads.
+		let player = new YT.Player('player', {
+			width: '100%',
+			videoId: 'eyNNuaqvT7I',
+			playerVars: {
+				color: `white`,
+				iv_load_policy: 3,
+				// modestbranding: 1,
+				rel: 0,
+				showinfo: 0,
+				start: 179,
+			},
+			events: {
+				'onReady': onPlayerReady,
+			}
+		});
+	});
+
+	function onPlayerReady(event) {	// The API will call this function when the video player is ready.
+		event.target.setVolume(10);
+		event.target.playVideo();
+	}
+
+
 	//phone mask
 	$(`[type="tel"]`).mask(`+7 (000) 000-00-00`, {
 		placeholder: "+7 (___) ___-__-__"

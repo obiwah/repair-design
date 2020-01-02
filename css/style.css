@@ -3,12 +3,14 @@
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Futura Demi";
   src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -622,6 +624,7 @@ img {
 .section-title__heading {
   margin-bottom: 0.93rem;
   font-family: "Yeseva One", cursive;
+  font-weight: normal;
   font-size: 1.43rem;
   line-height: 2rem;
   text-transform: uppercase;
@@ -982,6 +985,7 @@ img {
 
 .title {
   font-family: "Yeseva One", cursive;
+  font-weight: normal;
   font-size: 2.85rem;
   line-height: 3.79rem;
   text-transform: uppercase;
@@ -1189,6 +1193,7 @@ img {
 .control__play {
   position: relative;
   margin: auto;
+  cursor: pointer;
 }
 .control__text {
   margin: auto auto 4.5rem;
