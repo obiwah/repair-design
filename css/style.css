@@ -810,7 +810,7 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 0.75rem 1.5rem 0.75rem 1.3rem;
+  padding: 0.75rem 1.3rem 0.75rem 1.3rem;
   background-color: #E3B873;
 }
 .card__parameter:first-of-type {
@@ -818,6 +818,9 @@ img {
 }
 .card__ico {
   margin-right: 1rem;
+}
+.card .sup {
+  font-size: 0.6rem;
 }
 
 @media (max-width: 768px) {
@@ -1461,7 +1464,7 @@ img {
   }
 }
 .clients__section {
-  padding-bottom: 26.6rem;
+  padding-bottom: 28.5rem;
 }
 .clients__description {
   max-width: 25.71rem;
