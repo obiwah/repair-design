@@ -852,6 +852,7 @@ img {
 .logo {
   font-family: "Futura Demi", sans-serif;
   text-transform: uppercase;
+  text-decoration: none;
   color: #E3B873;
 }
 
