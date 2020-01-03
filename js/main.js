@@ -52,17 +52,17 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	}
 
 	//visibility and animation options for .scroll-up element
-	$(document).on(`scroll`, (scrollEvent) => {
-		if (scrollEvent.originalEvent.target.defaultView.scrollY > 450 ) {
-			$scrollUpBtn.removeClass(`animated fadeOutRight`)
-									.addClass(`animated fadeInRight`)
-									.removeClass(`scroll--invisible`);
-		} else {
-			$scrollUpBtn.removeClass(`animated fadeInRight`)
-									.addClass(`animated fadeOutRight`)
-									.addClass(`scroll--invisible`);
-		}
-	});
+	// $(document).on(`scroll`, (scrollEvent) => {
+	// 	if (scrollEvent.originalEvent.target.defaultView.scrollY > 450 ) {
+	// 		$scrollUpBtn.removeClass(`animated fadeOutRight`)
+	// 								.addClass(`animated fadeInRight`)
+	// 								.removeClass(`scroll--invisible`);
+	// 	} else {
+	// 		$scrollUpBtn.removeClass(`animated fadeInRight`)
+	// 								.addClass(`animated fadeOutRight`)
+	// 								.addClass(`scroll--invisible`);
+	// 	}
+	// });
 
 	// let stepsSwiper =  new Swiper (`.steps__swiper-container`, {
 	// 	wrapperClass: `steps__swiper-wrapper`,

@@ -754,6 +754,7 @@ img {
   margin: 0;
   font-family: "Yeseva One", cursive;
   font-size: 1.29rem;
+  font-weight: normal;
   line-height: 1.79rem;
   color: #181818;
 }
@@ -769,6 +770,8 @@ img {
   padding-bottom: 1rem;
   font-family: "Yeseva One", cursive;
   font-size: 0.93rem;
+  font-style: normal;
+  font-weight: normal;
   line-height: 1.43rem;
   text-transform: uppercase;
   color: #ffffff;
@@ -799,7 +802,6 @@ img {
   bottom: -3.4rem;
   display: flex;
   align-items: center;
-  width: fit-content;
   font-family: "Yeseva One", cursive;
   font-size: 1.21rem;
   line-height: 2rem;
@@ -1394,7 +1396,7 @@ img {
 .steps__section {
   margin-top: -475px;
   padding-top: 428px;
-  height: 1180px;
+  height: 1000px;
 }
 .steps__word::after {
   margin-left: 6rem;
