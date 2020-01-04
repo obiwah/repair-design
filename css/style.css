@@ -1531,17 +1531,17 @@ img {
 .footer__input {
   padding-top: 0.3rem;
 }
-.footer::placeholder {
+.footer__input::placeholder {
   opacity: 1;
   color: #ffffff;
 }
-.footer::placeholder-group {
+.footer__input-group {
   display: flex;
   flex-direction: column;
   flex-basis: 45%;
   margin-bottom: 3.2rem;
 }
-.footer::placeholder-group--full-width {
+.footer__input-group--full-width {
   flex-basis: 100%;
   margin-bottom: 2rem;
 }
