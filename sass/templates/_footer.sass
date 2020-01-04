@@ -31,6 +31,10 @@
   &__input
     padding-top: 0.3rem
 
+  &::placeholder
+    opacity: 1     //for firefox correct placeholder color
+    color: $light
+
     &-group
       display: flex
       flex-direction: column
@@ -61,6 +65,11 @@
     font-size: 1.43rem
     line-height: 2rem
     text-transform: uppercase
+
+    color: $primary
+
+  &__phone
+    text-decoration: none
 
     color: $primary
 
