@@ -70,7 +70,7 @@ function buildFonts (cb) {
 
 function buildImg (cb) {
 	src(`img/**/*`)
-		.pipe(imageMin())
+		// .pipe(imageMin()) // image compression via webStorm plugin, just copy
 		.pipe(dest(`dist/img`));
 
 	cb();
@@ -91,5 +91,5 @@ function buildJs (cb) {
 }
 
 exports.serve = bs;
-exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildJs);
+exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs);
 exports.buildimg = buildImg;
