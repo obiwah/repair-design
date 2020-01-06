@@ -19,17 +19,18 @@
 			(m[i].a = m[i].a || []).push(arguments)
 		};
 		m[i].l = 1 * new Date();
-		k = e.createElement(t), a = e.getElementsByTagName(t)[0],
-			k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-	})(window, document, "script",
-		"https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
-	ym(56920936, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true});
-  </script>
+		k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+	})(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+	ym(56920936, "init", {
+		clickmap: true,
+		trackLinks: true,
+		accurateTrackBounce: true,
+		webvisor: true,
+		trackHash: true
+	}); </script>
   <noscript>
-    <div><img src="https://mc.yandex.ru/watch/56920936" style="position:absolute; left:-9999px;"
-              alt=""/></div>
-  </noscript>
-  <!-- /Yandex.Metrika counter -->
+    <div><img src="https://mc.yandex.ru/watch/56920936" style="position:absolute; left:-9999px;" alt=""/></div>
+  </noscript> <!-- /Yandex.Metrika counter -->
   <header class="header">
     <div class="container">
       <div class="menu">
@@ -44,9 +45,7 @@
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-          <button class="btn contacts__btn btn--primary" onclick="ym(56920936, 'reachGoal', 'button'); return true;"
-                  data-toggle="modal">Заказать звонок
-          </button>
+          <button class="btn contacts__btn btn--primary" data-toggle="modal">Заказать звонок</button>
         </div>
         <!-- /.contacts -->
       </div>
@@ -587,7 +586,8 @@
       <div class="modal__dialog">
         <button class="modal__close"></button>
         <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-        <form class="form modal__form" action="send.php" method="post">
+        <form class="form modal__form" action="send.php" method="post" onsubmit="ym(56920936, 'reachGoal', 'formSubmit');
+						return true;">
           <div class="input-group modal__input-group">
             <label class="label form__label label--light" for="user-name">Имя</label>
             <input class="input input--light form__input modal__input" id="user-name" name="userName" type="text"
