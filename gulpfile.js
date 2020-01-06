@@ -92,4 +92,5 @@ function buildJs (cb) {
 
 exports.serve = bs;
 exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs);
+exports.html = buildHtml;
 exports.buildimg = buildImg;
