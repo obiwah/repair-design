@@ -708,6 +708,10 @@ img {
     line-height: 1.83rem;
   }
 }
+.card {
+  font-weight: normal;
+  font-style: normal;
+}
 .card__text {
   position: relative;
   margin: -9rem auto 0;
