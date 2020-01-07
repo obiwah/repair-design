@@ -612,6 +612,10 @@ img {
   max-width: 100%;
 }
 
+textarea:focus, input:focus {
+  outline: none;
+}
+
 @media screen and (max-width: 576px) {
   .title {
     font-size: 1.64rem;
