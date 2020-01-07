@@ -90,7 +90,13 @@ function buildJs (cb) {
 	cb();
 }
 
+function buildAdmin (cb) {
+	src([`admin/*`, `admin/.htaccess`])
+		.pipe(dest(`dist/admin`));
+
+	cb();
+}
 exports.serve = bs;
-exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs);
+exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs, buildAdmin);
 exports.html = buildHtml;
 exports.buildimg = buildImg;
