@@ -375,6 +375,9 @@ template {
   color: #ffffff;
   background-color: transparent;
 }
+.btn__focused {
+  color: #363636;
+}
 
 .label {
   font-size: 1.07rem;

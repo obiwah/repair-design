@@ -24,9 +24,10 @@
 // });
 
 $(function () { 												//= document.addEventListener(`DOMContentLoaded`
-	let $modal = $(`.modal`),
+	const $modal = $(`.modal`),
 			$modalBtns = $(`[data-toggle=modal]`),
 			$closeBtn = $(`.modal__close`),
+			$submitBtns = $(`[data-toggle=submit]`),
 			$scrollUpBtn = $(`.scroll-up`);
 
 	$modalBtns.on(`click`, function () {
@@ -57,6 +58,15 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 			$(btn).addClass(`animated pulse`); //mouseenter handler
 		}, () => {
 			$(btn).removeClass(`animated pulse`); //mouseleave handler
+		});
+	});
+
+	// submit buttons animation
+	$submitBtns.each((i, btn) => {
+		$(btn).hover(() => {
+			$(btn).addClass(`btn__focused`); //mouseenter handler
+		}, () => {
+			$(btn).removeClass(`btn__focused`); //mouseleave handler
 		});
 	});
 
