@@ -416,7 +416,7 @@ template {
   opacity: 0;
   visibility: hidden;
 }
-.policy__checkbox:checked + .policy__label::before {
+.policy__checkbox:checked ~ .policy__label::before {
   background: #E3B873 url("../img/interface/check.svg") no-repeat center/0.8rem;
 }
 .policy__label {
@@ -505,7 +505,6 @@ template {
 
   [data-toggle=submit]:hover {
     color: #ffffff;
-    transition: 0;
   }
 
   .link--effect-1:hover {
