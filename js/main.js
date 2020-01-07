@@ -51,6 +51,15 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 					.removeClass(`modal--visible`);
 	}
 
+	// modal buttons animation
+	$modalBtns.each((i, btn) => {
+		$(btn).hover(() => {
+				$(btn).addClass(`animated pulse`); //mouseenter handler
+			}, () => {
+				$(btn).removeClass(`animated pulse`); //mouseleave handler
+			});
+	});
+
 	//visibility and animation options for .scroll-up element
 	// $(document).on(`scroll`, (scrollEvent) => {
 	// 	if (scrollEvent.originalEvent.target.defaultView.scrollY > 450 ) {
@@ -100,15 +109,6 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		}
 	);
 	wow.init();
-
-	// modal buttons animation
-	$modalBtns.each((i, btn) => {
-		$(btn).on(`hover`, () => {
-			$(btn).addClass(`animated pulse`);
-		}, () => {
-			$(btn).removeClass(`animated pulse`);
-		});
-	});
 
 	//form validation
 	$(`.form`).each(function(i, form) {
