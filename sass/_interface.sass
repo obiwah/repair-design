@@ -29,6 +29,16 @@
 
     transition: color 0.4s
 
+.link--effect-1:hover
+  color: rgba($light, 0.6)
+
+  transition: color 0.4s
+
+.link--effect-2:hover
+  font-size: 101%
+
+  transition: color 0.4s
+
 .label
   font-size: 1.07rem
 
@@ -156,7 +166,13 @@
   [data-toggle=submit]:hover
     color: $light
 
-    transition: color 0.4s
+    transition: 0
+
+  .link--effect-1:hover
+    color: $primary
+
+  .link--effect-2:hover
+    font-size: 100%
 
 @media screen and (max-width: 768px)
   .scroll

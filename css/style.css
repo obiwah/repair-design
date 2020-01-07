@@ -381,6 +381,16 @@ template {
   transition: color 0.4s;
 }
 
+.link--effect-1:hover {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.4s;
+}
+
+.link--effect-2:hover {
+  font-size: 101%;
+  transition: color 0.4s;
+}
+
 .label {
   font-size: 1.07rem;
 }
@@ -495,7 +505,15 @@ template {
 
   [data-toggle=submit]:hover {
     color: #ffffff;
-    transition: color 0.4s;
+    transition: 0;
+  }
+
+  .link--effect-1:hover {
+    color: #E3B873;
+  }
+
+  .link--effect-2:hover {
+    font-size: 100%;
   }
 }
 @media screen and (max-width: 768px) {
