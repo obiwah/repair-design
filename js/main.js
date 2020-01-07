@@ -116,8 +116,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 			rules: {
 				userName: {
 					required: true,
-					minlength: 2,
-					maxlength: 15
+					rangelength: [2, 15]
 				},
 				userPhone: {
 					required: true,
@@ -127,12 +126,14 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 					required: true,
 					email: true
 				},
+				[`policy-checkbox`]: {
+					required: true,
+				}
 			},
 			messages: {
 				userName: {
 					required: "Заполните поле",
-					minlength: "Имя не короче 2 букв",
-					maxlength: "Имя не длиннее 2 букв"
+					rangelength: "От 2 до 15 букв",
 				},
 				userPhone: {
 					required: "Заполните поле",
@@ -142,6 +143,9 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 					required: "Заполните поле",
 					email: "Email должен быть в формате name@domain.com"
 				},
+				[`policy-checkbox`]: {
+					required: "Соглашайтесь!"
+				}
 			},
 			errorClass: "invalid",
 			errorElement: "div",
