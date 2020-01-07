@@ -52,21 +52,11 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 					.removeClass(`modal--visible`);
 	}
 
-	// modal buttons animation
 	$modalBtns.each((i, btn) => {
 		$(btn).hover(() => {
 			$(btn).addClass(`animated pulse`); //mouseenter handler
 		}, () => {
 			$(btn).removeClass(`animated pulse`); //mouseleave handler
-		});
-	});
-
-	// submit buttons animation
-	$submitBtns.each((i, btn) => {
-		$(btn).hover(() => {
-			$(btn).addClass(`btn__focused`); //mouseenter handler
-		}, () => {
-			$(btn).removeClass(`btn__focused`); //mouseleave handler
 		});
 	});
 

@@ -24,8 +24,10 @@
     color: $light
     background-color: transparent
 
-  &__focused
+[data-toggle=submit]:hover
     color: $dark2
+
+    transition: color 0.4s
 
 .label
   font-size: 1.07rem
@@ -150,6 +152,11 @@
     &-up
       &::after
         margin-left: 0
+
+  [data-toggle=submit]:hover
+    color: $light
+
+    transition: color 0.4s
 
 @media screen and (max-width: 768px)
   .scroll
