@@ -47,7 +47,7 @@ function buildPhp(cb) {
 
 function buildCss(cb) {
 	src(`css/style.css`)
-		.pipe(autoprefixer({ cascade: false }))
+		.pipe(autoprefixer({grid: "autoplace"}))
 		.pipe(cleanCss())
 		.pipe(dest(`dist/css`));
 
