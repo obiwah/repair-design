@@ -155,6 +155,9 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 						alert(`Форма отправлена, мы свяжемся с вами через 10 минут`);
 
 						if ($(form).hasClass('modal__form')) modalClose();
+
+						ym(56920936, 'reachGoal', 'formSubmit');
+						return true;
 					},
 					error: function (jqXHR, textStatus, errorThrown) {
 						console.error(`Ошибка отправки формы. jqXHR: ${jqXHR}, textStatus: ${textStatus}, errorThrown: ${errorThrown}`);
