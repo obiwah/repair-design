@@ -24,17 +24,17 @@
 // });
 
 $(function () { 												//= document.addEventListener(`DOMContentLoaded`
-	let $modal =  $(`.modal`),
+	let $modal = $(`.modal`),
 			$modalBtns = $(`[data-toggle=modal]`),
 			$closeBtn = $(`.modal__close`),
 			$scrollUpBtn = $(`.scroll-up`);
 
-	$modalBtns.on(`click`, function() {
+	$modalBtns.on(`click`, function () {
 		$modal.removeClass(`animated faster fadeOut`)
 					.addClass(`animated faster fadeIn`)
 					.addClass(`modal--visible`);
 
-		$modal.on(`click`,(clickEvent) => {
+		$modal.on(`click`, (clickEvent) => {
 			if (clickEvent.target.classList.contains(`modal`)) modalClose();
 		});
 
@@ -45,7 +45,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 
 	$closeBtn.on(`click`, modalClose);
 
-	function modalClose () {
+	function modalClose() {
 		$modal.removeClass(`animated faster fadeIn`)
 					.addClass(`animated faster fadeOut`)
 					.removeClass(`modal--visible`);
@@ -54,10 +54,10 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	// modal buttons animation
 	$modalBtns.each((i, btn) => {
 		$(btn).hover(() => {
-				$(btn).addClass(`animated pulse`); //mouseenter handler
-			}, () => {
-				$(btn).removeClass(`animated pulse`); //mouseleave handler
-			});
+			$(btn).addClass(`animated pulse`); //mouseenter handler
+		}, () => {
+			$(btn).removeClass(`animated pulse`); //mouseleave handler
+		});
 	});
 
 	//visibility and animation options for .scroll-up element
@@ -89,7 +89,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	// });
 
 	//initialize swiper for projects section
-	let projectsSwiper = new Swiper ('.projects .swiper-container', {
+	let projectsSwiper = new Swiper('.projects .swiper-container', {
 		// Optional parameters
 		spaceBetween: 1,
 		loop: true,
@@ -111,21 +111,22 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	wow.init();
 
 	//form validation
-	$(`.form`).each(function(i, form) {
+	$(`.form`).each(function (i, form) {
 		$(form).validate({
 			rules: {
-				// simple rule, converted to {required:true}
 				userName: {
 					required: true,
 					minlength: 2,
 					maxlength: 15
 				},
-				userPhone: "required",
-				// compound rule
+				userPhone: {
+					required: true,
+					minlength: 18,
+				},
 				userEmail: {
 					required: true,
 					email: true
-				}
+				},
 			},
 			messages: {
 				userName: {
@@ -133,15 +134,18 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 					minlength: "Имя не короче 2 букв",
 					maxlength: "Имя не длиннее 2 букв"
 				},
-				userPhone: "Заполните поле",
+				userPhone: {
+					required: "Заполните поле",
+					minlength: "Телефон в формате: +7 (xxx) xxx-xx-xx",
+				},
 				userEmail: {
 					required: "Заполните поле",
 					email: "Email должен быть в формате name@domain.com"
-				}
+				},
 			},
 			errorClass: "invalid",
 			errorElement: "div",
-			submitHandler: function(form) {
+			submitHandler: function (form) {
 				$.ajax({
 					type: `post`,
 					url: `send.php`,
@@ -153,12 +157,20 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 						if ($(form).hasClass('modal__form')) modalClose();
 					},
 					error: function (jqXHR, textStatus, errorThrown) {
-						console.error(`jqXHR: ${jqXHR}, textStatus: ${textStatus}, errorThrown: ${errorThrown}`);
+						console.error(`Ошибка отправки формы. jqXHR: ${jqXHR}, textStatus: ${textStatus}, errorThrown: ${errorThrown}`);
 					}
 				})
 			},
 		});
 	});
+
+	//phone mask
+	$(`[type="tel"]`).mask(`+7 (000) 000-00-00`)
+		.each(function(i, element) {
+			$(element).on(`focus`, () => {
+				$(this).attr("placeholder", "+7 (___) ___ __-__");
+			});
+		});
 
 	//YouTube video embedding
 	$(`.control__play`).on(`click`, function onYouTubeIframeAPIReady() {	// This function creates an <iframe> (and
@@ -185,15 +197,10 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		event.target.playVideo();
 	}
 
-
-	//phone mask
-	$(`[type="tel"]`).mask(`+7 (000) 000-00-00`, {
-		// placeholder: "+7 (___) ___-__-__"
-	});
-
 	// initialize Yandex map
 	ymaps.ready(initMap);
-	function initMap(){
+
+	function initMap() {
 		// Создание карты.
 		let yandexMap = new ymaps.Map("yandex-map", {
 			// Координаты центра карты.
