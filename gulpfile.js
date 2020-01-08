@@ -96,8 +96,17 @@ function buildAdmin (cb) {
 
 	cb();
 }
+
+function buildFavicon (cb) {
+	src(`favicon.ico`)
+		.pipe(dest(`dist/`));
+
+	cb();
+}
+
+
 exports.serve = bs;
-exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs, buildAdmin);
+exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs, buildAdmin, buildFavicon);
 exports.buildnoimg = series(buildHtml, buildPhp, buildCss, buildFonts, buildJs, buildAdmin);
 exports.html = buildHtml;
 exports.htmlcss = series(buildHtml, buildCss);
