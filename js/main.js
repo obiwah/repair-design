@@ -184,6 +184,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		// YouTube player) after the API code downloads.
 		let player = new YT.Player('player', {
 			width: '100%',
+			height: 'auto',
 			videoId: 'eyNNuaqvT7I',
 			playerVars: {
 				color: `white`,
