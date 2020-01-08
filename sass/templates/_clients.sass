@@ -14,16 +14,26 @@
 
   &__card
     max-width: 26.86rem
+    height: 428px
     padding-top: 1.55rem
     padding-left: 1.43rem
     padding-right: 2rem
-
-    //border: 1px solid gray
 
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.04)
 
   &__image
     border-radius: 50%
+
+@media screen and (max-width: 1350px)
+  .clients
+    &__card
+      height: 500px
+
+@media screen and (max-width: 1200px)
+  .clients
+    &__card
+      height: 430px
+
 
 @media (max-width: 768px)
   .clients

@@ -754,10 +754,6 @@ textarea:focus, input:focus {
     line-height: 1.83rem;
   }
 }
-.card {
-  font-weight: normal;
-  font-style: normal;
-}
 .card__text {
   position: relative;
   margin: -9rem auto 0;
@@ -848,8 +844,7 @@ textarea:focus, input:focus {
 }
 .card__parameters {
   position: relative;
-  left: -1.43rem;
-  bottom: -3.4rem;
+  top: -2rem;
   display: flex;
   align-items: center;
   width: 20.982rem;
@@ -1584,6 +1579,7 @@ textarea:focus, input:focus {
 }
 .clients__card {
   max-width: 26.86rem;
+  height: 428px;
   padding-top: 1.55rem;
   padding-left: 1.43rem;
   padding-right: 2rem;
@@ -1593,6 +1589,16 @@ textarea:focus, input:focus {
   border-radius: 50%;
 }
 
+@media screen and (max-width: 1350px) {
+  .clients__card {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .clients__card {
+    height: 430px;
+  }
+}
 @media (max-width: 768px) {
   .clients {
     display: none;
