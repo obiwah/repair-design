@@ -98,5 +98,7 @@ function buildAdmin (cb) {
 }
 exports.serve = bs;
 exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs, buildAdmin);
+exports.buildnoimg = series(buildHtml, buildPhp, buildCss, buildFonts, buildJs, buildAdmin);
 exports.html = buildHtml;
+exports.htmlcss = series(buildHtml, buildCss);
 exports.buildimg = buildImg;
