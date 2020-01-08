@@ -1,34 +1,52 @@
+.img
+  &__wrapper
+    &-1
+      position: relative
+      padding-top: 53.1212%
+
+      & img
+        position: absolute
+        top: 0
+        left: 0
+
+        width: 100%
+        height: auto
+
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 2
+
+        width: 100%
+        height: 100%
+
+        background: rgba(black, 0.8)
+
+#player
+  margin: auto
+
 .control
   &__section-title
-    margin-top: -28.7rem
+    margin-top: -27.7rem
     margin-bottom: 2.214rem
 
   &__video
     position: relative
-
-    display: flex
 
     margin: auto auto 4.45rem
     max-width: 817px
 
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15)
 
-    &::before
-      content: ''
-      position: absolute
-
-      width: 100%
-      height: 100%
-
-      background: rgba(black, 0.8)
-
   &__play
     position: absolute
+    top: 34.5%
     left: 41%
-    top: 34%
+    z-index: 2
 
-    width: 17.4%
-
+    width: 17.5%
     margin: auto
 
     cursor: pointer
@@ -89,5 +107,11 @@
 
     &__policy-label
       color: $light
+
+    &__btn
+      margin-top: 2rem
+
+    &__video
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
 
 

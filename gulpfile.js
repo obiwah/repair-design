@@ -104,7 +104,6 @@ function buildFavicon (cb) {
 	cb();
 }
 
-
 exports.serve = bs;
 exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs, buildAdmin, buildFavicon);
 exports.buildnoimg = series(buildHtml, buildPhp, buildCss, buildFonts, buildJs, buildAdmin);

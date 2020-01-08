@@ -10,7 +10,7 @@
     margin-right: 6rem
 
   &__section
-    padding-bottom: 22rem
+    padding-bottom: 22.3rem
 
   &__heading
     margin-top: 0
@@ -63,6 +63,19 @@
         font-size: 1.07rem
         line-height: 1.43rem
 
+      &__img
+        position: relative
+
+        //max-width: 679px
+        padding-top: 70.9867%   //height/width * 100%
+
+        & img
+          position: absolute
+          left: 0
+          top: 0
+          width: 93.5%
+          height: auto
+
     &-pagination
       position: static
 
@@ -90,7 +103,7 @@
         display: inline-block
         width: 40px
         height: 14px
-
+        outline: none
         &::after
           display: none
 
@@ -116,6 +129,7 @@
     background-color: $dark3
 
     &__section
+      padding-top: 20px
       padding-bottom: 0
 
     &__column
