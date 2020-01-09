@@ -90,13 +90,6 @@ function buildJs (cb) {
 	cb();
 }
 
-function buildAdmin (cb) {
-	src([`admin/*`, `admin/.htaccess`])
-		.pipe(dest(`dist/admin`));
-
-	cb();
-}
-
 function buildFavicon (cb) {
 	src(`favicon.ico`)
 		.pipe(dest(`dist/`));
@@ -105,8 +98,8 @@ function buildFavicon (cb) {
 }
 
 exports.serve = bs;
-exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs, buildAdmin, buildFavicon);
-exports.buildnoimg = series(buildHtml, buildPhp, buildCss, buildFonts, buildJs, buildAdmin);
+exports.build = series(buildHtml, buildPhp, buildCss, buildFonts, buildImg, buildJs, buildFavicon);
+exports.buildnoimg = series(buildHtml, buildPhp, buildCss, buildFonts, buildJs);
 exports.html = buildHtml;
 exports.htmlcss = series(buildHtml, buildCss);
 exports.buildimg = buildImg;
