@@ -387,8 +387,8 @@ template {
 }
 
 .link--effect-2:hover {
-  font-size: 101%;
-  transition: color 0.4s;
+  font-size: 103%;
+  transition: font-size 0.4s;
 }
 
 .label {
@@ -466,10 +466,14 @@ template {
   align-items: center;
   min-width: 17.6rem;
   min-height: 6.92rem;
+  font-family: "Yeseva One", cursive;
+  font-size: 0.857rem;
+  line-height: 1.214rem;
 }
 .scroll-down::after {
   content: "";
-  margin-left: 12px;
+  position: absolute;
+  left: 13.8rem;
   background: url("../img/interface/arrow_down.svg") no-repeat center;
 }
 .scroll-up {
@@ -909,6 +913,9 @@ textarea:focus, input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1920px;
+  padding-left: 5.71rem;
+  padding-right: 7.14rem;
 }
 
 .logo {
@@ -950,6 +957,12 @@ textarea:focus, input:focus {
   }
 }
 @media screen and (max-width: 992px) {
+  .menu {
+    width: 87%;
+    margin: auto;
+    padding: 0;
+  }
+
   .nav {
     display: none;
   }
@@ -1176,7 +1189,7 @@ textarea:focus, input:focus {
   width: 9.57px;
   margin-right: 17.54px !important;
   margin-bottom: 3px !important;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .projects .swiper-pagination-bullet:last-of-type {
   margin-right: 28px !important;
