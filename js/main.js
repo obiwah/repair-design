@@ -180,10 +180,13 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		});
 
 	//YouTube video embedding
+	const $videoContainer = $(`.control__video`);
+
 	$(`.control__play`).on(`click`, function onYouTubeIframeAPIReady() {	// This function creates an <iframe> (and
 		// YouTube player) after the API code downloads.
 		let player = new YT.Player('player', {
-			width: '100%',
+			width: $videoContainer.width(),
+			height: $videoContainer.height(),
 			videoId: 'eyNNuaqvT7I',
 			playerVars: {
 				color: `white`,

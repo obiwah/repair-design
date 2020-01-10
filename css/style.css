@@ -1189,7 +1189,7 @@ textarea:focus, input:focus {
   width: 9.57px;
   margin-right: 17.54px !important;
   margin-bottom: 3px !important;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .projects .swiper-pagination-bullet:last-of-type {
   margin-right: 28px !important;
@@ -1269,7 +1269,7 @@ textarea:focus, input:focus {
 }
 .img__wrapper-1 {
   position: relative;
-  padding-top: 53.1212%;
+  padding-top: 53.1211750306%;
 }
 .img__wrapper-1 img {
   position: absolute;
@@ -1291,6 +1291,7 @@ textarea:focus, input:focus {
 
 #player {
   margin: auto;
+  text-align: center;
 }
 
 .control__section-title {
@@ -1301,6 +1302,7 @@ textarea:focus, input:focus {
   position: relative;
   margin: auto auto 4.45rem;
   max-width: 817px;
+  background-color: #000000;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 .control__play {
@@ -1313,6 +1315,7 @@ textarea:focus, input:focus {
   cursor: pointer;
 }
 .control__text {
+  max-width: 39rem;
   margin: auto auto 4.5rem;
 }
 .control__text::before {
@@ -1588,7 +1591,7 @@ textarea:focus, input:focus {
   line-height: 1.93rem;
 }
 .clients__col-30 {
-  flex-basis: 30%;
+  flex-basis: 30.6%;
 }
 .clients__card {
   max-width: 26.86rem;
@@ -1618,7 +1621,8 @@ textarea:focus, input:focus {
   }
 }
 .footer {
-  background: #181818 url("../img/footer-bg.jpg") no-repeat center/cover;
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%), url("../img/footer-bg.png") no-repeat right;
+  background-size: cover;
 }
 .footer__section {
   padding-bottom: 0;
