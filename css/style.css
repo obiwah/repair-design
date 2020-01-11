@@ -546,7 +546,7 @@ template {
     display: none;
   }
 }
-@media (max-height: 375px) {
+@media (max-width: 375px) {
   #policy-checkbox-error {
     text-align: left;
   }
