@@ -546,6 +546,11 @@ template {
     display: none;
   }
 }
+@media (max-height: 375px) {
+  #policy-checkbox-error {
+    text-align: left;
+  }
+}
 .container {
   width: 80%;
   max-width: 1256px;
@@ -1129,9 +1134,6 @@ textarea:focus, input:focus {
 .projects__section {
   padding-top: 9.09rem;
 }
-.projects__column {
-  height: 42rem;
-}
 .projects__main {
   width: 39%;
   margin-right: 6rem;
@@ -1286,13 +1288,8 @@ textarea:focus, input:focus {
   }
 }
 @media (max-width: 375px) {
-  .projects .swiper-slide__img {
-    padding-top: 0;
-  }
   .projects .swiper-slide img {
-    position: static;
-    display: block;
-    margin: auto;
+    width: 100%;
   }
   .projects .swiper-slide__heading {
     margin-top: 0;
@@ -1580,6 +1577,9 @@ textarea:focus, input:focus {
 }
 
 @media (max-width: 375px) {
+  .modal {
+    top: 20px;
+  }
   .modal__btn {
     align-self: center;
   }

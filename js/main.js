@@ -53,10 +53,10 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 	}
 
 	$modalBtns.each((i, btn) => {
-		$(btn).hover(() => {
-			$(btn).addClass(`animated pulse`); //mouseenter handler
-		}, () => {
-			$(btn).removeClass(`animated pulse`); //mouseleave handler
+		$(btn).hover(() => { //mouseenter handler
+			if ($(window).width() >= 992)	$(btn).addClass(`animated pulse`);
+		}, () => { //mouseleave handler
+			if ($(window).width() >= 992) $(btn).removeClass(`animated pulse`);
 		});
 	});
 
