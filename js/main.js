@@ -207,23 +207,50 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 		event.target.playVideo();
 	}
 
-	// initialize Yandex map
-	ymaps.ready(initMap);
+	new Blazy();
 
-	function initMap() {
-		let yandexMap = new ymaps.Map("yandex-map", {
-			center: [47.244734, 39.723227],
-			zoom: 17,
-			controls: ['zoomControl']
-		});
+	let mapY = document.getElementById(`yandex-map`).getBoundingClientRect().top;
+	let isMap = false;
 
-		yandexMap.behaviors.disable([`scrollZoom`]);
+	document.body.onscroll = function () {
+		if (window.pageYOffset > mapY && !isMap) {
+			isMap = true;
 
-		let decorum = new ymaps.Placemark([47.244734, 39.723227], {}, {
-			iconImageHref: 'img/icons/locator.png',
-			iconImageSize: [32, 32],
-		});
+			// initialize 2gis map api
+			// DG.then(function () {
+			// 	let map = DG.map('yandex-map', {
+			// 		center: [47.244734, 39.723227],
+			// 		zoom: 17,
+			// 		scrollWheelZoom: false,
+			// 		fullscreenControl: false
+			// 	});
+			//
+			// 	myIcon = DG.icon({
+			// 		iconUrl: 'img/icons/locator.png',
+			// 		iconSize: [32, 32]
+			// 	});
+			//
+			// 	DG.marker([47.244734, 39.723227], {
+			// 		icon: myIcon
+			// 	}).addTo(map);
+			// });
 
-		yandexMap.geoObjects.add(decorum);
+			// initialize Yandex map
+			ymaps.ready(initMap);
+
+			function initMap() {
+				let yandexMap = new ymaps.Map("yandex-map", {
+					center: [47.244734, 39.723227],
+					zoom: 17,
+					controls: ['zoomControl']
+				});
+
+				yandexMap.behaviors.disable([`scrollZoom`]);
+
+				let decorum = new ymaps.Placemark([47.244734, 39.723227], {}, {});
+
+				yandexMap.geoObjects.add(decorum);
+			}
+		}
 	}
 });

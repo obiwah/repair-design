@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <!-- Yandex.Metrika counter --> <script>
+  <!-- Yandex.Metrika counter --> <script async type="module">
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(56920936, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/56920936" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <header class="header">
       <div class="menu">
@@ -168,9 +168,13 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper swiper-no-swiping">
                 <!-- Slides -->
-                <div class="swiper-slide swiper-slide__img"><img src="img/project.jpg" alt=""></div>
-                <div class="swiper-slide swiper-slide__img"><img src="img/project.jpg" alt=""></div>
-                <div class="swiper-slide swiper-slide__img"><img src="img/project.jpg" alt=""></div>
+                <div
+                    class="swiper-slide swiper-slide__img"><img class="b-lazy" src="img/placeholder.gif" data-src="img/project.jpg"
+                                                                alt=""></div>
+                <div class="swiper-slide swiper-slide__img"><img class="b-lazy" src="img/placeholder.gif"
+                                                                 data-src="img/project.jpg" alt=""></div>
+                <div class="swiper-slide swiper-slide__img"><img class="b-lazy" src="img/placeholder.gif"
+                                                                 data-src="img/project.jpg" alt=""></div>
               </div>
             </div>
           </div>
@@ -193,7 +197,7 @@
         <!-- /.section-title -->
         <div class="control__video video">
           <div id="player">
-            <div class="img__wrapper-1"><img src="img/video_mask.jpg" alt=""></div>
+            <div class="img__wrapper-1"><img class="b-lazy" src="img/placeholder.gif" data-src="img/video_mask.jpg" alt=""></div>
             <img class="control__play" src="img/icons/play_ico.svg" alt="play icon">
           </div>
           
@@ -240,7 +244,7 @@
         <div class="row">
           <div class="col-30">
             <div class="card types__card">
-              <img src="img/types/type_01.jpg" alt="Косметический ремонт">
+              <img class="b-lazy" src="img/placeholder.gif" data-src="img/types/type_01.jpg" alt="Косметический ремонт">
               <div class="card__text types__text">
                 <h3 class="card__title types__title">Косметический ремонт</h3>
                 <ul class="card__list types__list">
@@ -261,7 +265,7 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card types__card">
-              <img src="img/types/type_02.jpg" alt="Капитальный ремонт">
+              <img class="b-lazy" src="img/placeholder.gif" data-src="img/types/type_02.jpg" alt="Капитальный ремонт">
               <div class="card__text types__text">
                 <h3 class="card__title types__title">Капитальный ремонт</h3>
                 <ul class="card__list types__list">
@@ -282,7 +286,8 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card types__card">
-              <img class="card__image" src="img/types/type_03.jpg" alt="Дизайнерский ремонт">
+              <img class="card__image b-lazy" src="img/placeholder.gif" data-src="img/types/type_03.jpg"
+                   alt="Дизайнерский ремонт">
               <div class="card__text types__text">
                 <h3 class="card__title types__title">Дизайнерский ремонт</h3>
                 <ul class="card__list types__list">
@@ -324,7 +329,8 @@
         <div class="row">
           <div class="col-30">
             <div class="card design__card">
-              <img class="card__image" src="img/design/design_01.jpg" alt="Минимальный">
+              <img class="card__image b-lazy" src="img/placeholder.gif" data-src="img/design/design_01.jpg"
+              alt="Минимальный">
               <div class="card__text design__text">
                 <h3 class="card__title design__title">Минимальный</h3>
                 <ul class="card__list design__list">
@@ -342,7 +348,8 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card design__card">
-              <img class="card__image" src="img/design/design_02.jpg" alt="Стандартный">
+              <img class="card__image b-lazy" src="img/placeholder.gif" data-src="img/design/design_02.jpg"
+                   alt="Стандартный">
               <div class="card__text design__text">
                 <h3 class="card__title design__title">Стандартный</h3>
                 <ul class="card__list design__list">
@@ -364,7 +371,8 @@
           <!-- /.col-30 -->
           <div class="col-30">
             <div class="card design__card">
-              <img class="card__image" src="img/design/design_03.jpg" alt="Полный">
+              <img class="card__image b-lazy" src="img/placeholder.gif" data-src="img/design/design_03.jpg"
+                   alt="Полный">
               <div class="card__text design__text">
                 <h3 class="card__title design__title">Полный</h3>
                 <ul class="card__list design__list">
@@ -426,7 +434,7 @@
         <div class="section-title section-title--light team__section-title">
           <h2 class="section-title__heading team__heading">Наша команда</h2>
           <div class="section-title__image team__image">
-            <img src="img/icons/team_ico.svg" alt="">
+            <img  class="b-lazy" src="img/placeholder.gif" data-src="img/icons/team_ico.svg" alt="">
           </div>
           <!-- /.section-title__image -->
           <p class="section-title__description section-title--light team__description wow fadeInUp">Наша команда
@@ -436,7 +444,7 @@
         <div class="row">
           <div class="col-30 team__col">
             <div class="card team__card team__card--manager">
-              <img class="card__image" src="img/team/manager.jpg" alt="Менеджер">
+              <img class="card__image b-lazy" src="img/placeholder.gif" data-src="img/team/manager.jpg" alt="Менеджер">
               <div class="card__badge">
                 <h3 class="card__name">Алексей Колмаков</h3>
                 <div class="card__occupation">Проектный менеджер</div>
@@ -449,7 +457,7 @@
           <!-- /.col-30 -->
           <div class="col-30 team__col">
             <div class="card team__card team__card--designer">
-              <img class="card__image" src="img/team/designer.jpg" alt="Дизайнер">
+              <img class="card__image b-lazy" src="img/placeholder.gif" data-src="img/team/designer.jpg" alt="Дизайнер">
               <div class="card__badge">
                 <h3 class="card__name">Алиса Сухорукова</h3>
                 <div class="card__occupation">Дизайнер</div>
@@ -462,7 +470,7 @@
           <!-- /.col-30 -->
           <div class="col-30 team__col">
             <div class="card team__card team__card--brigadier">
-              <img class="card__image" src="img/team/brigadier.jpg" alt="Бригадир">
+              <img class="card__image b-lazy" src="img/placeholder.gif" data-src="img/team/brigadier.jpg" alt="Бригадир">
               <div class="card__badge">
                 <h3 class="card__name">Давид Волынев</h3>
                 <div class="card__occupation">Бригадир</div>
@@ -675,7 +683,11 @@
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ab2ee6ec-c28c-4c87-9873-af1904634147&lang=ru_RU&load=Map,control.ZoomControl,Placemark"></script>
+<!--  <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=basic&lazy=true"></script>-->
+  <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ab2ee6ec-c28c-4c87-9873-af1904634147&lang=ru_RU&load=Map,control.ZoomControl,Placemark">
+  </script>
+  <script src="js/blazy.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
