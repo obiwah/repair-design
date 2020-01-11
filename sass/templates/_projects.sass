@@ -124,7 +124,7 @@
           &:last-of-type
             margin-bottom: 4rem
 
-@media screen and (max-width: 768px)
+@media (max-width: 768px)
   .projects
     background-color: $dark3
 
@@ -171,6 +171,29 @@
 
         &-nav
           text-align: center
+
+@media (max-width: 375px)
+  .projects
+    & .swiper
+      &-slide
+        &__img
+          padding-top: 0
+
+        & img
+          position: static
+
+          display: block
+          margin: auto
+
+        &__heading
+          margin-top: 0
+
+        &__text
+          &:first-of-type
+            margin-bottom: 2.5rem
+
+          &:last-of-type
+            margin-bottom: 2.5rem
 
 
 

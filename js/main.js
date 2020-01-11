@@ -217,7 +217,7 @@ $(function () { 												//= document.addEventListener(`DOMContentLoaded`
 			controls: ['zoomControl']
 		});
 
-		yandexMap.behaviors.disable([`drag`, `scrollZoom`]);
+		yandexMap.behaviors.disable([`scrollZoom`]);
 
 		let decorum = new ymaps.Placemark([47.244734, 39.723227], {}, {
 			iconImageHref: 'img/icons/locator.png',

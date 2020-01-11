@@ -357,6 +357,7 @@ template {
   font-family: "Futura Demi", sans-serif;
   font-size: 0.929rem;
   text-transform: uppercase;
+  outline: none;
 }
 .btn:hover {
   cursor: pointer;
@@ -892,6 +893,12 @@ textarea:focus, input:focus {
   .card__item--mobile-showable {
     display: inline;
   }
+  .card__name {
+    font-size: 1.5rem;
+  }
+  .card__experience {
+    font-size: 1.083rem;
+  }
 }
 @media (max-width: 400px) {
   .card__text {
@@ -1108,6 +1115,17 @@ textarea:focus, input:focus {
     height: 0;
   }
 }
+@media (max-width: 375px) {
+  .hero__content {
+    max-width: 100%;
+  }
+  .hero__text {
+    width: 84%;
+  }
+  .hero__btn {
+    width: 100%;
+  }
+}
 .projects__section {
   padding-top: 9.09rem;
 }
@@ -1223,7 +1241,7 @@ textarea:focus, input:focus {
     margin-bottom: 4rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .projects {
     background-color: #252525;
   }
@@ -1265,6 +1283,25 @@ textarea:focus, input:focus {
   }
   .projects .swiper-nav {
     text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .projects .swiper-slide__img {
+    padding-top: 0;
+  }
+  .projects .swiper-slide img {
+    position: static;
+    display: block;
+    margin: auto;
+  }
+  .projects .swiper-slide__heading {
+    margin-top: 0;
+  }
+  .projects .swiper-slide__text:first-of-type {
+    margin-bottom: 2.5rem;
+  }
+  .projects .swiper-slide__text:last-of-type {
+    margin-bottom: 2.5rem;
   }
 }
 .img__wrapper-1 {
@@ -1359,6 +1396,9 @@ textarea:focus, input:focus {
   .control__section-title {
     margin-top: 0;
   }
+  .control__text {
+    font-size: 1.17rem;
+  }
   .control__label {
     color: rgba(255, 255, 255, 0.5);
   }
@@ -1376,6 +1416,33 @@ textarea:focus, input:focus {
   }
   .control__video {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (max-width: 375px) {
+  .control {
+    padding-bottom: 0;
+  }
+  .control__text {
+    max-width: 100%;
+    margin-bottom: 26px;
+    font-size: 1.12rem;
+  }
+  .control__input-group {
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+  .control__policy {
+    margin-top: -130px;
+  }
+  .control__policy-label {
+    justify-content: flex-start;
+  }
+  .control__btn {
+    position: relative;
+    top: 1.7rem;
+    width: 100%;
+    margin-top: 3rem;
   }
 }
 .types__section-title {
@@ -1398,6 +1465,9 @@ textarea:focus, input:focus {
 }
 
 @media screen and (max-width: 760px) {
+  .types {
+    padding-top: 70px;
+  }
   .types__card {
     margin-bottom: 5rem;
   }
@@ -1509,6 +1579,11 @@ textarea:focus, input:focus {
   line-height: 1.29rem;
 }
 
+@media (max-width: 375px) {
+  .modal__btn {
+    align-self: center;
+  }
+}
 .steps__section {
   margin-top: -475px;
   padding-top: 428px;
@@ -1729,6 +1804,30 @@ textarea:focus, input:focus {
   }
   .footer__btn {
     width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .footer__form {
+    flex-direction: column;
+  }
+  .footer__policy {
+    align-self: flex-start;
+    margin-top: -1.5rem;
+    margin-bottom: 5rem;
+  }
+  .footer__contacts {
+    margin-top: 0;
+  }
+  .footer__contacts-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footer__map {
+    width: 100%;
+    height: 255px;
+  }
+  .footer__menu {
+    display: none;
   }
 }
 

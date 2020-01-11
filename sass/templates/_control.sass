@@ -99,6 +99,9 @@
     &__section-title
       margin-top: 0
 
+    &__text
+      font-size: 1.17rem
+
     &__label
       color: rgba($light, 0.5)
 
@@ -116,5 +119,35 @@
 
     &__video
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+
+@media (max-width: 375px)
+  .control
+    padding-bottom: 0
+
+    &__text
+      max-width: 100%
+      margin-bottom: 26px
+
+      font-size: 1.12rem
+
+    &__input-group
+      flex-direction: column
+      flex-basis: 100%
+
+      margin-bottom: 50px
+
+    &__policy
+      margin-top: -130px
+
+      &-label
+        justify-content: flex-start
+
+    &__btn
+      position: relative
+      top: 1.7rem
+
+      width: 100%
+      margin-top: 3rem
+
 
 
