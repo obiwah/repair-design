@@ -1134,6 +1134,9 @@ textarea:focus, input:focus {
 .projects__section {
   padding-top: 9.09rem;
 }
+.projects__column {
+  height: 42rem;
+}
 .projects__main {
   width: 39%;
   margin-right: 6rem;
