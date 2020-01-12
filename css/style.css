@@ -551,6 +551,10 @@ template {
     text-align: left;
   }
 }
+section {
+  width: 100vw;
+}
+
 .container {
   width: 80%;
   max-width: 1256px;
@@ -914,7 +918,7 @@ textarea:focus, input:focus {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 99;
   padding: 24px 0;
   line-height: 1.143rem;
@@ -1017,7 +1021,7 @@ textarea:focus, input:focus {
   content: "";
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 3.46rem;
